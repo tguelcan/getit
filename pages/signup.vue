@@ -2,153 +2,151 @@
     <div>
         <div class="flex flex-wrap justify-center md:flex-no-wrap h-screen">
             <div class="w-full max-w-lg my-auto mx-3">
-                <div class="w-full text-right">
+                <div class="w-full">
                     <nuxt-link to="/">
-                        <eva-icons name="close-outline" fill="#6d6d6d" />
+                        Zurück
                     </nuxt-link>
                 </div>
-                <h1 class="text-4xl font-serif">
-                    Sign up
-                </h1>
-                <p class="my-5">Register a new <b>tutels</b> account.</p>
-                <!-- Error Messages -->
-                <p>{{ haveError.message }}</p>
-                <ValidationObserver ref="form" v-slot="{ handleSubmit }" slim>
-                    <form
-                        class="w-full max-w-lg"
-                        @submit.prevent="handleSubmit(submit)"
+                <g-card headline="Registrieren">
+                    <!-- Error Messages -->
+                    <p>{{ haveError.message }}</p>
+                    <ValidationObserver
+                        ref="form"
+                        v-slot="{ handleSubmit }"
+                        slim
                     >
-                        <!-- Username -->
-                        <div class="form-wrap">
-                            <div class="form-content w-full">
-                                <label class="form-label" for="name">
-                                    Username
-                                </label>
-                                <validation-provider
-                                    v-slot="{ errors }"
-                                    vid="name"
-                                    mode="lazy"
-                                    name="name"
-                                    rules="required"
-                                >
-                                    <input
-                                        id="name"
-                                        v-model="user.name"
-                                        class="form-input"
-                                        :class="{
-                                            'form-has-danger': errors[0]
-                                        }"
-                                        type="text"
-                                        placeholder="john doe"
-                                    />
-                                    <span class="text-danger text-xs">{{
-                                        errors[0]
-                                    }}</span>
-                                </validation-provider>
+                        <form
+                            class="w-full max-w-lg"
+                            @submit.prevent="handleSubmit(submit)"
+                        >
+                            <!-- Username -->
+                            <div class="form-wrap">
+                                <div class="form-content w-full">
+                                    <label class="block" for="name">
+                                        Username
+                                        <validation-provider
+                                            v-slot="{ errors }"
+                                            vid="name"
+                                            mode="lazy"
+                                            name="name"
+                                            rules="required"
+                                        >
+                                            <input
+                                                id="name"
+                                                v-model="guest.name"
+                                                class="form-input block w-full"
+                                                :class="{
+                                                    'form-has-danger': errors[0]
+                                                }"
+                                                type="text"
+                                                placeholder="john doe"
+                                            />
+                                            <span class="text-danger text-xs">{{
+                                                errors[0]
+                                            }}</span>
+                                        </validation-provider>
+                                    </label>
+                                </div>
                             </div>
-                        </div>
-                        <!-- E-Mail -->
-                        <div class="form-wrap">
-                            <div class="form-content w-full">
-                                <label class="form-label" for="email">
-                                    E-Mail
-                                </label>
-                                <validation-provider
-                                    v-slot="{ errors }"
-                                    vid="email"
-                                    mode="lazy"
-                                    name="email"
-                                    rules="email"
-                                >
-                                    <input
-                                        id="email"
-                                        v-model="user.email"
-                                        class="form-input"
-                                        :class="{
-                                            'form-has-danger': errors[0]
-                                        }"
-                                        type="text"
-                                        placeholder="john@bar.com"
-                                    />
-                                    <span class="text-danger text-xs">{{
-                                        errors[0]
-                                    }}</span>
-                                </validation-provider>
+                            <!-- E-Mail -->
+                            <div class="form-wrap mt-3">
+                                <div class="form-content w-full">
+                                    <label class="block" for="email">
+                                        E-Mail
+                                        <validation-provider
+                                            v-slot="{ errors }"
+                                            vid="email"
+                                            mode="lazy"
+                                            name="email"
+                                            rules="email"
+                                        >
+                                            <input
+                                                id="email"
+                                                v-model="guest.email"
+                                                class="form-input block w-full"
+                                                :class="{
+                                                    'form-has-danger': errors[0]
+                                                }"
+                                                type="text"
+                                                placeholder="john@bar.com"
+                                            />
+                                            <span class="text-danger text-xs">{{
+                                                errors[0]
+                                            }}</span>
+                                        </validation-provider>
+                                    </label>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Password -->
-                        <div class="form-wrap">
-                            <div class="form-content w-full">
-                                <label class="form-label" for="password">
-                                    Password
-                                </label>
-                                <validation-provider
-                                    v-slot="{ errors }"
-                                    vid="password"
-                                    mode="passive"
-                                    name="password"
-                                    rules="required|verify_password"
-                                >
-                                    <input
-                                        id="password"
-                                        v-model="user.password"
-                                        class="form-input"
-                                        :class="{
-                                            'form-has-danger': errors[0]
-                                        }"
-                                        type="password"
-                                        placeholder="******************"
-                                    />
-                                    <span class="text-danger text-xs">{{
-                                        errors[0]
-                                    }}</span>
-                                </validation-provider>
+                            <!-- Password -->
+                            <div class="form-wrap mt-3">
+                                <div class="form-content w-full">
+                                    <label class="block" for="password">
+                                        Password
+                                        <validation-provider
+                                            v-slot="{ errors }"
+                                            vid="password"
+                                            mode="passive"
+                                            name="password"
+                                            rules="required|verify_password"
+                                        >
+                                            <input
+                                                id="password"
+                                                v-model="guest.password"
+                                                class="form-input block w-full"
+                                                :class="{
+                                                    'form-has-danger': errors[0]
+                                                }"
+                                                type="password"
+                                                placeholder="******************"
+                                            />
+                                            <span class="text-danger text-xs">{{
+                                                errors[0]
+                                            }}</span>
+                                        </validation-provider>
+                                    </label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-wrap">
-                            <div class="form-content w-full">
-                                <label class="form-label" for="confirmPassword">
-                                    Confirm Password
-                                </label>
-                                <validation-provider
-                                    v-slot="{ errors }"
-                                    mode="passive"
-                                    name="confirmPassword"
-                                    rules="required|password:@password"
-                                >
-                                    <input
-                                        id="confirmPassword"
-                                        v-model="user.confirmPassword"
-                                        class="form-input"
-                                        :class="{
-                                            'form-has-danger': errors[0]
-                                        }"
-                                        type="password"
-                                        placeholder="******************"
-                                    />
-                                    <span class="text-danger text-xs">{{
-                                        errors[0]
-                                    }}</span>
-                                </validation-provider>
+                            <div class="form-wrap mt-3">
+                                <div class="form-content w-full">
+                                    <label class="block" for="confirmPassword">
+                                        Confirm Password
+                                    </label>
+                                    <validation-provider
+                                        v-slot="{ errors }"
+                                        mode="passive"
+                                        name="confirmPassword"
+                                        rules="required|password:@password"
+                                    >
+                                        <input
+                                            id="confirmPassword"
+                                            v-model="guest.confirmPassword"
+                                            class="form-input block w-full"
+                                            :class="{
+                                                'form-has-danger': errors[0]
+                                            }"
+                                            type="password"
+                                            placeholder="******************"
+                                        />
+                                        <span class="text-danger text-xs">{{
+                                            errors[0]
+                                        }}</span>
+                                    </validation-provider>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Buttons -->
-                        <div class="form-wrap">
-                            <div class="form-content ml-auto">
-                                <button class="button-link">
-                                    Register
-                                </button>
+                            <!-- Buttons -->
+                            <div class="form-wrap mt-3 text-right">
+                                <div class="form-content ml-auto">
+                                    <g-button class="button-link">
+                                        Register
+                                    </g-button>
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                </ValidationObserver>
-
-                <div class="w-full max-w-lg">
-                    <hr class="mb-3" />
-                </div>
-                <div class="w-full max-w-lg text-center">
-                    <nuxt-link class="text-primary" to="/signin">
-                        Sign in with an existing account
+                        </form>
+                    </ValidationObserver>
+                </g-card>
+                <div class="w-full max-w-lg text-center mt-3">
+                    <nuxt-link class="button button-link" to="/signin">
+                        Account vorhanden?
                     </nuxt-link>
                 </div>
             </div>
@@ -159,20 +157,26 @@
 <script>
 import { ValidationObserver, ValidationProvider } from 'vee-validate'
 import { mapActions } from 'vuex'
+
+import gCard from '@/components/molecules/card'
+import gButton from '@/components/molecules/button'
+
 export default {
     name: 'Signin',
     layout: 'blanc',
     middleware: 'notAuthenticated',
     components: {
         ValidationObserver,
-        ValidationProvider
+        ValidationProvider,
+        gButton,
+        gCard
     },
     data() {
         return {
             isLoading: false,
             submitted: false,
             haveError: {},
-            user: {
+            guest: {
                 name: '',
                 email: '',
                 password: '',
@@ -187,10 +191,10 @@ export default {
         }),
         async submit(e) {
             try {
-                await this.register(this.user)
+                await this.register(this.guest)
                 this.submitted = true
                 this.$refs.form.reset()
-                this.user = {}
+                this.guest = {}
                 this.$nextTick(() => {
                     this.$refs.form.reset()
                 })

@@ -2,69 +2,64 @@
     <div>
         <div class="flex flex-wrap justify-center md:flex-no-wrap h-screen">
             <div class="w-full max-w-lg my-auto mx-3">
-                <div class="w-full text-right">
+                <div class="w-full">
                     <nuxt-link to="/">
-                        Back
+                        Zurück
                     </nuxt-link>
                 </div>
-                <h1 class="text-4xl font-serif">
-                    Forgot Password
-                </h1>
-                <p class="my-5">
-                    Just reset your password and look in your mailbox.
-                </p>
-                <!-- Error Messages -->
-                {{ haveError.message }}
-                <ValidationObserver ref="form" v-slot="{ handleSubmit }" slim>
-                    <form
-                        class="w-full max-w-lg"
-                        @submit.prevent="handleSubmit(submit)"
+                <g-card headline="Passwort anfordern">
+                    <!-- Error Messages -->
+                    {{ haveError.message }}
+                    <ValidationObserver
+                        ref="form"
+                        v-slot="{ handleSubmit }"
+                        slim
                     >
-                        <!-- E-Mail -->
-                        <div class="form-wrap">
-                            <div class="form-content w-full">
-                                <label class="form-label" for="email">
-                                    E-Mail
-                                </label>
-                                <validation-provider
-                                    v-slot="{ errors }"
-                                    mode="lazy"
-                                    name="email"
-                                    rules="email"
-                                >
-                                    <input
-                                        id="email"
-                                        v-model="user.email"
-                                        class="form-input"
-                                        :class="{
-                                            'form-has-danger': errors[0]
-                                        }"
-                                        type="text"
-                                        placeholder="john@bar.com"
-                                    />
-                                    <span class="text-danger text-xs">{{
-                                        errors[0]
-                                    }}</span>
-                                </validation-provider>
+                        <form
+                            class="w-full max-w-lg"
+                            @submit.prevent="handleSubmit(submit)"
+                        >
+                            <!-- E-Mail -->
+                            <div class="form-wrap">
+                                <div class="form-content w-full">
+                                    <label class="block" for="email">
+                                        E-Mail
+                                        <validation-provider
+                                            v-slot="{ errors }"
+                                            mode="lazy"
+                                            name="email"
+                                            rules="email"
+                                        >
+                                            <input
+                                                id="email"
+                                                v-model="guest.email"
+                                                class="form-input block w-full"
+                                                :class="{
+                                                    'form-has-danger': errors[0]
+                                                }"
+                                                type="text"
+                                                placeholder="john@bar.com"
+                                            />
+                                            <span class="text-danger text-xs">{{
+                                                errors[0]
+                                            }}</span>
+                                        </validation-provider>
+                                    </label>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Buttons -->
-                        <div class="form-wrap">
-                            <div class="form-content ml-auto">
-                                <button class="button-primary">
-                                    Verify
-                                </button>
+                            <!-- Buttons -->
+                            <div class="form-wrap text-right">
+                                <g-button class="mt-2">
+                                    Anfordern
+                                </g-button>
                             </div>
-                        </div>
-                    </form>
-                </ValidationObserver>
+                        </form>
+                    </ValidationObserver>
+                </g-card>
 
-                <div class="w-full max-w-lg">
-                    <hr class="mb-3" />
-                </div>
-                <div class="w-full max-w-lg text-center">
+                <div class="w-full max-w-lg text-center mt-3">
                     <nuxt-link class="button-link" to="/signin">
-                        Sign in with an existing account
+                        Account vorhanden?
                     </nuxt-link>
                 </div>
             </div>
@@ -75,20 +70,26 @@
 <script>
 import { ValidationObserver, ValidationProvider } from 'vee-validate'
 import { mapActions } from 'vuex'
+
+import gCard from '@/components/molecules/card'
+import gButton from '@/components/molecules/button'
+
 export default {
     name: 'Signin',
     layout: 'blanc',
     middleware: 'notAuthenticated',
     components: {
         ValidationObserver,
-        ValidationProvider
+        ValidationProvider,
+        gCard,
+        gButton
     },
     data: () => ({
         submitted: false,
         saved: false,
         isLoading: false,
         haveError: {},
-        user: {
+        guest: {
             email: '',
             password: '',
             link: `${process.env.appUrl}/reset`,
@@ -102,9 +103,9 @@ export default {
         }),
         async submit(e) {
             try {
-                await this.forgot(this.user)
+                await this.forgot(this.guest)
                 this.$refs.form.reset()
-                this.user = {
+                this.guest = {
                     email: '',
                     password: '',
                     link: process.env.appUrl
