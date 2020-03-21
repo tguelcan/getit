@@ -1,0 +1,193 @@
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+.fade-enter-active,
+.fade-leave-active {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-faster-enter-active,
+.fade-faster-leave-active {
+  opacity: 1;
+  transition: opacity 0.25s;
+}
+
+.fade-faster-enter,
+.fade-faster-leave-to {
+  opacity: 0;
+}
+
+.animated {
+  transition: all 0.2s;
+}
+
+/*
+ * List Item Animation
+ */
+.list-item {
+  display: inline-block;
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s;
+}
+
+.list-enter {
+  opacity: 0;
+  transform: translateY(-2rem);
+}
+
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+/*
+ * Top Modal Item Animation
+ */
+.topModal-item {
+  display: inline-block;
+}
+
+.topModal-enter-active,
+.topModal-leave-active {
+  transition: all 0.3s;
+}
+
+.topModal-enter,
+.topModal-leave-to {
+  opacity: 0;
+  transform: translateY(-2rem);
+}
+
+.topModalBg-enter-active,
+.topModalBg-leave-active {
+  opacity: 0.75;
+  transition: opacity 0.3s;
+}
+
+.topModalBg-enter,
+.topModalBg-leave-to {
+  opacity: 0;
+}
+
+.topModalBgFull-enter-active,
+.topModalBgFull-leave-active {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.topModalBgFull-enter,
+.topModalBgFull-leave-to {
+  opacity: 0;
+}
+
+/* 
+ * Enter and leave animations can use different
+ * durations and timing functions.              
+ */
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-enter {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+
+.slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+/*
+ * Slide Vertical 
+ */
+.slide-bottom-fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-bottom-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-bottom-fade-enter {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.slide-bottom-fade-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+/*
+ * Slide Vertical 
+ */
+.slide-top-fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-top-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-top-fade-enter {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.slide-top-fade-leave-to {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+/*
+ * Toasts transition
+ */
+.toasts-item {
+  width: 100%;
+  right: 0;
+  transition: all 0.5s;
+}
+
+.toasts-enter,
+.toasts-leave-to {
+  opacity: 0;
+  transform: scale(1);
+}
+
+.toasts-leave-active {
+  position: absolute;
+  z-index: -1;
+}
+
+/*
+ * Modal transition
+ */
+
+.modal-enter,
+.modal-leave-to {
+  opacity: 0;
+  transform: scale(1);
+}
+
+.modal-leave-active {
+  opacity: 0;
+}

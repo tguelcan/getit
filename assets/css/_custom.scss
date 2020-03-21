@@ -1,0 +1,88 @@
+body,
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  @apply font-sans;
+  @apply bg-white;
+  font-size: 1em;
+  @apply text-dark;
+  overscroll-behavior: contain;
+}
+
+a,
+button,
+div {
+  -webkit-tap-highlight-color: transparent;
+  &:focus {
+    outline: 0;
+  }
+}
+
+.top {
+  &-fix {
+    @apply mt-16;
+    &-lg {
+      @apply mt-20;
+    }
+  }
+}
+
+// Page Transition
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.15s;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+// Or divider
+.or {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: theme('colors.grey');
+}
+
+.or:after,
+.or:before {
+  content: '';
+  background: theme('colors.grey');
+  height: 1px;
+  @apply mx-3 block w-full;
+}
+
+// Font
+
+a {
+  @apply text-primary;
+
+  &:hover {
+    @apply text-secondary;
+  }
+}
+
+h1 {
+  font-size: 2em;
+  @apply text-dark subpixel-antialiased cursor-default;
+}
+
+h2 {
+  font-size: 1.6em;
+  @apply text-dark subpixel-antialiased cursor-default;
+}
+
+h3 {
+  font-size: 1.4em;
+  @apply text-dark subpixel-antialiased cursor-default;
+}
+
+.muted {
+  &-lead {
+    @apply text-sm mt-3 text-grey;
+  }
+}

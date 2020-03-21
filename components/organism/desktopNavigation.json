@@ -1,0 +1,24 @@
+{
+  "mainNavigationContent": [
+    {
+      "name": "News",
+      "route": "/",
+      "exact": true
+    },
+    {
+      "name": "Kontakte",
+      "route": "/#"
+    },
+    {
+      "name": "Dokumente",
+      "route": "/#"
+    }
+  ],
+  "rightNavigationContent": [
+    {
+      "name": "Profil",
+      "route": "/profile",
+      "icon": "person"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+$font-path: '~assets/fonts/';
+
+@font-face {
+  font-family: 'VWAGTheSans-Regular';
+  src: url('#{$font-path}VWAGTheSans-Regular.eot');
+  src: url('#{$font-path}VWAGTheSans-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('#{$font-path}VWAGTheSans-Regular.woff') format('woff'),
+    url('#{$font-path}VWAGTheSans-Regular.woff2') format('woff2'),
+    url('#{$font-path}VWAGTheSans-Regular.svg#VWAGTheSans-Regular')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VWAGTheSans-Light';
+  src: url('#{$font-path}VWAGTheSans-Light.eot');
+  src: url('#{$font-path}VWAGTheSans-Light.eot?#iefix')
+      format('embedded-opentype'),
+    url('#{$font-path}VWAGTheSans-Light.woff') format('woff'),
+    url('#{$font-path}VWAGTheSans-Light.woff2') format('woff2'),
+    url('#{$font-path}VWAGTheSans-Light.svg#VWAGTheSans-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VWAGTheSans-Bold';
+  src: url('#{$font-path}VWAGTheSans-Bold.eot');
+  src: url('#{$font-path}VWAGTheSans-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    url('#{$font-path}VWAGTheSans-Bold.woff') format('woff'),
+    url('#{$font-path}VWAGTheSans-Bold.woff2') format('woff2'),
+    url('#{$font-path}VWAGTheSans-Bold.svg#VWAGTheSans-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VWAGTheSans-Italic';
+  src: url('#{$font-path}VWAGTheSans-Italic.eot');
+  src: url('#{$font-path}VWAGTheSans-Italic.eot?#iefix')
+      format('embedded-opentype'),
+    url('#{$font-path}VWAGTheSans-Italic.woff') format('woff'),
+    url('#{$font-path}VWAGTheSans-Italic.woff2') format('woff2'),
+    url('#{$font-path}VWAGTheSans-Italic.svg#VWAGTheSans-Italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VWAGTheAntiqua-Regular';
+  src: url('#{$font-path}VWAGTheAntiqua-Regular.eot');
+  src: url('#{$font-path}VWAGTheAntiqua-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('#{$font-path}VWAGTheAntiqua-Regular.woff') format('woff'),
+    url('#{$font-path}VWAGTheAntiqua-Regular.woff2') format('woff2'),
+    url('#{$font-path}VWAGTheAntiqua-Regular.svg#VWAGTheAntiqua-Regular')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VWAGTheAntiqua-Bold';
+  src: url('#{$font-path}VWAGTheAntiqua-Bold.eot');
+  src: url('#{$font-path}VWAGTheAntiqua-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    url('#{$font-path}VWAGTheAntiqua-Bold.woff') format('woff'),
+    url('#{$font-path}VWAGTheAntiqua-Bold.woff2') format('woff2'),
+    url('#{$font-path}VWAGTheAntiqua-Bold.svg#VWAGTheAntiqua-Bold')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VWAGTheAntiqua-Italic';
+  src: url('#{$font-path}VWAGTheAntiqua-Italic.eot');
+  src: url('#{$font-path}VWAGTheAntiqua-Italic.eot?#iefix')
+      format('embedded-opentype'),
+    url('#{$font-path}VWAGTheAntiqua-Italic.woff') format('woff'),
+    url('#{$font-path}VWAGTheAntiqua-Italic.woff2') format('woff2'),
+    url('#{$font-path}VWAGTheAntiqua-Italic.svg#VWAGTheAntiqua-Italic')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

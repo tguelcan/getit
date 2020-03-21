@@ -1,0 +1,1058 @@
+/**
+Theme: vwag
+Iconfont name: groupui-vwag-icons-complete
+*/
+$iconfont-path: '~assets/fonts/iconfont/';
+$icon-font-size: 1.42em;
+
+@font-face {
+  font-family: 'groupui-vwag-icons-complete';
+  src: url('#{$iconfont-path}groupui-vwag-icons-complete.eot'),
+    url('#{$iconfont-path}groupui-vwag-icons-complete.eot?#iefix-')
+      format('embedded-opentype'),
+    url('#{$iconfont-path}groupui-vwag-icons-complete.woff2') format('woff2'),
+    url('#{$iconfont-path}groupui-vwag-icons-complete.woff') format('woff'),
+    url('#{$iconfont-path}groupui-vwag-icons-complete.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$icons: (
+  i-airplay: '\ea01',
+  i-alarm: '\ea02',
+  i-arrow-left: '\ea03',
+  i-arrow-right: '\ea04',
+  i-attach: '\ea05',
+  i-attention-2: '\ea06',
+  i-attention-shield: '\ea07',
+  i-back: '\ea08',
+  i-backwards: '\ea09',
+  i-battery: '\ea0a',
+  i-bike: '\ea0b',
+  i-bluetooth: '\ea0c',
+  i-bookmark: '\ea0d',
+  i-calendar-eight: '\ea0e',
+  i-calendar-eighteen: '\ea0f',
+  i-calendar-eleven: '\ea10',
+  i-calendar-fifteen: '\ea11',
+  i-calendar-fifth: '\ea12',
+  i-calendar-first: '\ea13',
+  i-calendar-fourteen: '\ea14',
+  i-calendar-fourth: '\ea15',
+  i-calendar-nineteen: '\ea16',
+  i-calendar-ninth: '\ea17',
+  i-calendar-second: '\ea18',
+  i-calendar-seventeen: '\ea19',
+  i-calendar-seventh: '\ea1a',
+  i-calendar-sixteen: '\ea1b',
+  i-calendar-sixth: '\ea1c',
+  i-calendar-ten: '\ea1d',
+  i-calendar-third: '\ea1e',
+  i-calendar-thirteen: '\ea1f',
+  i-calendar-thirty-one: '\ea20',
+  i-calendar-thirty: '\ea21',
+  i-calendar-twelve: '\ea22',
+  i-calendar-twenty-eight: '\ea23',
+  i-calendar-twenty-five: '\ea24',
+  i-calendar-twenty-four: '\ea25',
+  i-calendar-twenty-nine: '\ea26',
+  i-calendar-twenty-one: '\ea27',
+  i-calendar-twenty-seven: '\ea28',
+  i-calendar-twenty-six: '\ea29',
+  i-calendar-twenty-three: '\ea2a',
+  i-calendar-twenty-two: '\ea2b',
+  i-calendar-twenty: '\ea2c',
+  i-calendar: '\ea2d',
+  i-camera: '\ea2e',
+  i-car-battery: '\ea2f',
+  i-car: '\ea30',
+  i-cast: '\ea31',
+  i-charging: '\ea32',
+  i-chat: '\ea33',
+  i-check-circle: '\ea34',
+  i-check-list: '\ea35',
+  i-check: '\ea36',
+  i-clipboard: '\ea37',
+  i-clock: '\ea38',
+  i-close-circle: '\ea39',
+  i-close: '\ea3a',
+  i-co-2-2: '\ea3b',
+  i-co-2: '\ea3c',
+  i-comment: '\ea3d',
+  i-compass: '\ea3e',
+  i-corn: '\ea3f',
+  i-court-hammer: '\ea40',
+  i-court-house: '\ea41',
+  i-crash: '\ea42',
+  i-creditcard: '\ea43',
+  i-cyber-security: '\ea44',
+  i-dash: '\ea45',
+  i-delete-document: '\ea46',
+  i-delete-folder: '\ea47',
+  i-delete: '\ea48',
+  i-diagram-2: '\ea49',
+  i-diagram: '\ea4a',
+  i-diamond: '\ea4b',
+  i-do-not-pass: '\ea4c',
+  i-document-storage: '\ea4d',
+  i-document: '\ea4e',
+  i-dollar: '\ea4f',
+  i-download-2: '\ea50',
+  i-download: '\ea51',
+  i-driving-ban: '\ea52',
+  i-dropdown-closed: '\ea53',
+  i-dropdown-open: '\ea54',
+  i-e-mail: '\ea55',
+  i-edit: '\ea56',
+  i-electricity-1: '\ea57',
+  i-electricity-2: '\ea58',
+  i-elevator: '\ea59',
+  i-euro: '\ea5a',
+  i-facebook: '\ea5b',
+  i-factory: '\ea5c',
+  i-fairness: '\ea5d',
+  i-faq: '\ea5e',
+  i-filter: '\ea5f',
+  i-flag: '\ea60',
+  i-folder: '\ea61',
+  i-forward-2: '\ea62',
+  i-forward: '\ea63',
+  i-forwards: '\ea64',
+  i-gear: '\ea65',
+  i-global: '\ea66',
+  i-globe: '\ea67',
+  i-grid-view: '\ea68',
+  i-handshake: '\ea69',
+  i-headphones: '\ea6a',
+  i-heart: '\ea6b',
+  i-home: '\ea6c',
+  i-i-mac: '\ea6d',
+  i-idea: '\ea6e',
+  i-image: '\ea6f',
+  i-inbox: '\ea70',
+  i-information: '\ea71',
+  i-instagram: '\ea72',
+  i-key: '\ea73',
+  i-lab: '\ea74',
+  i-label-text: '\ea75',
+  i-label: '\ea76',
+  i-law: '\ea77',
+  i-learn: '\ea78',
+  i-library: '\ea79',
+  i-like: '\ea7a',
+  i-link: '\ea7b',
+  i-list-view: '\ea7c',
+  i-lock-close: '\ea7d',
+  i-lock-open: '\ea7e',
+  i-luxury: '\ea7f',
+  i-map: '\ea80',
+  i-maximize: '\ea81',
+  i-measure: '\ea82',
+  i-menu: '\ea83',
+  i-minimize: '\ea84',
+  i-mouse: '\ea85',
+  i-new-document: '\ea86',
+  i-new-folder: '\ea87',
+  i-new-window: '\ea88',
+  i-no-parking: '\ea89',
+  i-notes: '\ea8a',
+  i-notice: '\ea8b',
+  i-notifications-off: '\ea8c',
+  i-notifications: '\ea8d',
+  i-parking: '\ea8e',
+  i-pause-circle: '\ea8f',
+  i-pause: '\ea90',
+  i-photo-camera: '\ea91',
+  i-play-circle: '\ea92',
+  i-play-file: '\ea93',
+  i-play: '\ea94',
+  i-plug: '\ea95',
+  i-position: '\ea96',
+  i-print: '\ea97',
+  i-reload: '\ea98',
+  i-repair: '\ea99',
+  i-save: '\ea9a',
+  i-search: '\ea9b',
+  i-send: '\ea9c',
+  i-share: '\ea9d',
+  i-shoppingcart: '\ea9e',
+  i-shovel: '\ea9f',
+  i-slack: '\eaa0',
+  i-sound-decrease: '\eaa1',
+  i-sound-increase: '\eaa2',
+  i-sound-off: '\eaa3',
+  i-speed-00: '\eaa4',
+  i-speed-1: '\eaa5',
+  i-speed-100: '\eaa6',
+  i-speed-2: '\eaa7',
+  i-speed-25: '\eaa8',
+  i-speed-3: '\eaa9',
+  i-speed-4: '\eaaa',
+  i-speed-5: '\eaab',
+  i-speed-50: '\eaac',
+  i-speed-6: '\eaad',
+  i-speed-7: '\eaae',
+  i-speed-75: '\eaaf',
+  i-star: '\eab0',
+  i-stop-circle: '\eab1',
+  i-stop: '\eab2',
+  i-suitcase: '\eab3',
+  i-sustainability: '\eab4',
+  i-tablet: '\eab5',
+  i-target: '\eab6',
+  i-thermometer-high: '\eab7',
+  i-thermometer-low: '\eab8',
+  i-thermometer: '\eab9',
+  i-triangle: '\eaba',
+  i-truck: '\eabb',
+  i-twitter: '\eabc',
+  i-upload-2: '\eabd',
+  i-upload: '\eabe',
+  i-usb: '\eabf',
+  i-user-accept: '\eac0',
+  i-user-add: '\eac1',
+  i-user-decline: '\eac2',
+  i-user-delete: '\eac3',
+  i-user-group: '\eac4',
+  i-user: '\eac5',
+  i-visible: '\eac6',
+  i-wifi: '\eac7',
+  i-workshop: '\eac8',
+  i-zoom-in: '\eac9',
+  i-zoom-out: '\eaca'
+);
+
+@mixin icon($key: '') {
+  font-family: 'groupui-vwag-icons-complete' !important;
+  display: inline-block;
+  vertical-align: middle;
+  letter-spacing: normal;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  font-size: $icon-font-size;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes
+  -moz-osx-font-smoothing: grayscale; // sass-lint:disable-line no-vendor-prefixes
+  @if map-has-key($icons, $key) {
+    content: map-get($icons, $key);
+  }
+}
+
+.icon {
+  @include icon;
+}
+
+/*
+Glyphs list
+*/
+
+.i-airplay::after {
+  content: '\ea01';
+}
+
+.i-alarm::after {
+  content: '\ea02';
+}
+
+.i-arrow-left::after {
+  content: '\ea03';
+}
+
+.i-arrow-right::after {
+  content: '\ea04';
+}
+
+.i-attach::after {
+  content: '\ea05';
+}
+
+.i-attention-2::after {
+  content: '\ea06';
+}
+
+.i-attention-shield::after {
+  content: '\ea07';
+}
+
+.i-back::after {
+  content: '\ea08';
+}
+
+.i-backwards::after {
+  content: '\ea09';
+}
+
+.i-battery::after {
+  content: '\ea0a';
+}
+
+.i-bike::after {
+  content: '\ea0b';
+}
+
+.i-bluetooth::after {
+  content: '\ea0c';
+}
+
+.i-bookmark::after {
+  content: '\ea0d';
+}
+
+.i-calendar-eight::after {
+  content: '\ea0e';
+}
+
+.i-calendar-eighteen::after {
+  content: '\ea0f';
+}
+
+.i-calendar-eleven::after {
+  content: '\ea10';
+}
+
+.i-calendar-fifteen::after {
+  content: '\ea11';
+}
+
+.i-calendar-fifth::after {
+  content: '\ea12';
+}
+
+.i-calendar-first::after {
+  content: '\ea13';
+}
+
+.i-calendar-fourteen::after {
+  content: '\ea14';
+}
+
+.i-calendar-fourth::after {
+  content: '\ea15';
+}
+
+.i-calendar-nineteen::after {
+  content: '\ea16';
+}
+
+.i-calendar-ninth::after {
+  content: '\ea17';
+}
+
+.i-calendar-second::after {
+  content: '\ea18';
+}
+
+.i-calendar-seventeen::after {
+  content: '\ea19';
+}
+
+.i-calendar-seventh::after {
+  content: '\ea1a';
+}
+
+.i-calendar-sixteen::after {
+  content: '\ea1b';
+}
+
+.i-calendar-sixth::after {
+  content: '\ea1c';
+}
+
+.i-calendar-ten::after {
+  content: '\ea1d';
+}
+
+.i-calendar-third::after {
+  content: '\ea1e';
+}
+
+.i-calendar-thirteen::after {
+  content: '\ea1f';
+}
+
+.i-calendar-thirty-one::after {
+  content: '\ea20';
+}
+
+.i-calendar-thirty::after {
+  content: '\ea21';
+}
+
+.i-calendar-twelve::after {
+  content: '\ea22';
+}
+
+.i-calendar-twenty-eight::after {
+  content: '\ea23';
+}
+
+.i-calendar-twenty-five::after {
+  content: '\ea24';
+}
+
+.i-calendar-twenty-four::after {
+  content: '\ea25';
+}
+
+.i-calendar-twenty-nine::after {
+  content: '\ea26';
+}
+
+.i-calendar-twenty-one::after {
+  content: '\ea27';
+}
+
+.i-calendar-twenty-seven::after {
+  content: '\ea28';
+}
+
+.i-calendar-twenty-six::after {
+  content: '\ea29';
+}
+
+.i-calendar-twenty-three::after {
+  content: '\ea2a';
+}
+
+.i-calendar-twenty-two::after {
+  content: '\ea2b';
+}
+
+.i-calendar-twenty::after {
+  content: '\ea2c';
+}
+
+.i-calendar::after {
+  content: '\ea2d';
+}
+
+.i-camera::after {
+  content: '\ea2e';
+}
+
+.i-car-battery::after {
+  content: '\ea2f';
+}
+
+.i-car::after {
+  content: '\ea30';
+}
+
+.i-cast::after {
+  content: '\ea31';
+}
+
+.i-charging::after {
+  content: '\ea32';
+}
+
+.i-chat::after {
+  content: '\ea33';
+}
+
+.i-check-circle::after {
+  content: '\ea34';
+}
+
+.i-check-list::after {
+  content: '\ea35';
+}
+
+.i-check::after {
+  content: '\ea36';
+}
+
+.i-clipboard::after {
+  content: '\ea37';
+}
+
+.i-clock::after {
+  content: '\ea38';
+}
+
+.i-close-circle::after {
+  content: '\ea39';
+}
+
+.i-close::after {
+  content: '\ea3a';
+}
+
+.i-co-2-2::after {
+  content: '\ea3b';
+}
+
+.i-co-2::after {
+  content: '\ea3c';
+}
+
+.i-comment::after {
+  content: '\ea3d';
+}
+
+.i-compass::after {
+  content: '\ea3e';
+}
+
+.i-corn::after {
+  content: '\ea3f';
+}
+
+.i-court-hammer::after {
+  content: '\ea40';
+}
+
+.i-court-house::after {
+  content: '\ea41';
+}
+
+.i-crash::after {
+  content: '\ea42';
+}
+
+.i-creditcard::after {
+  content: '\ea43';
+}
+
+.i-cyber-security::after {
+  content: '\ea44';
+}
+
+.i-dash::after {
+  content: '\ea45';
+}
+
+.i-delete-document::after {
+  content: '\ea46';
+}
+
+.i-delete-folder::after {
+  content: '\ea47';
+}
+
+.i-delete::after {
+  content: '\ea48';
+}
+
+.i-diagram-2::after {
+  content: '\ea49';
+}
+
+.i-diagram::after {
+  content: '\ea4a';
+}
+
+.i-diamond::after {
+  content: '\ea4b';
+}
+
+.i-do-not-pass::after {
+  content: '\ea4c';
+}
+
+.i-document-storage::after {
+  content: '\ea4d';
+}
+
+.i-document::after {
+  content: '\ea4e';
+}
+
+.i-dollar::after {
+  content: '\ea4f';
+}
+
+.i-download-2::after {
+  content: '\ea50';
+}
+
+.i-download::after {
+  content: '\ea51';
+}
+
+.i-driving-ban::after {
+  content: '\ea52';
+}
+
+.i-dropdown-closed::after {
+  content: '\ea53';
+}
+
+.i-dropdown-open::after {
+  content: '\ea54';
+}
+
+.i-e-mail::after {
+  content: '\ea55';
+}
+
+.i-edit::after {
+  content: '\ea56';
+}
+
+.i-electricity-1::after {
+  content: '\ea57';
+}
+
+.i-electricity-2::after {
+  content: '\ea58';
+}
+
+.i-elevator::after {
+  content: '\ea59';
+}
+
+.i-euro::after {
+  content: '\ea5a';
+}
+
+.i-facebook::after {
+  content: '\ea5b';
+}
+
+.i-factory::after {
+  content: '\ea5c';
+}
+
+.i-fairness::after {
+  content: '\ea5d';
+}
+
+.i-faq::after {
+  content: '\ea5e';
+}
+
+.i-filter::after {
+  content: '\ea5f';
+}
+
+.i-flag::after {
+  content: '\ea60';
+}
+
+.i-folder::after {
+  content: '\ea61';
+}
+
+.i-forward-2::after {
+  content: '\ea62';
+}
+
+.i-forward::after {
+  content: '\ea63';
+}
+
+.i-forwards::after {
+  content: '\ea64';
+}
+
+.i-gear::after {
+  content: '\ea65';
+}
+
+.i-global::after {
+  content: '\ea66';
+}
+
+.i-globe::after {
+  content: '\ea67';
+}
+
+.i-grid-view::after {
+  content: '\ea68';
+}
+
+.i-handshake::after {
+  content: '\ea69';
+}
+
+.i-headphones::after {
+  content: '\ea6a';
+}
+
+.i-heart::after {
+  content: '\ea6b';
+}
+
+.i-home::after {
+  content: '\ea6c';
+}
+
+.i-i-mac::after {
+  content: '\ea6d';
+}
+
+.i-idea::after {
+  content: '\ea6e';
+}
+
+.i-image::after {
+  content: '\ea6f';
+}
+
+.i-inbox::after {
+  content: '\ea70';
+}
+
+.i-information::after {
+  content: '\ea71';
+}
+
+.i-instagram::after {
+  content: '\ea72';
+}
+
+.i-key::after {
+  content: '\ea73';
+}
+
+.i-lab::after {
+  content: '\ea74';
+}
+
+.i-label-text::after {
+  content: '\ea75';
+}
+
+.i-label::after {
+  content: '\ea76';
+}
+
+.i-law::after {
+  content: '\ea77';
+}
+
+.i-learn::after {
+  content: '\ea78';
+}
+
+.i-library::after {
+  content: '\ea79';
+}
+
+.i-like::after {
+  content: '\ea7a';
+}
+
+.i-link::after {
+  content: '\ea7b';
+}
+
+.i-list-view::after {
+  content: '\ea7c';
+}
+
+.i-lock-close::after {
+  content: '\ea7d';
+}
+
+.i-lock-open::after {
+  content: '\ea7e';
+}
+
+.i-luxury::after {
+  content: '\ea7f';
+}
+
+.i-map::after {
+  content: '\ea80';
+}
+
+.i-maximize::after {
+  content: '\ea81';
+}
+
+.i-measure::after {
+  content: '\ea82';
+}
+
+.i-menu::after {
+  content: '\ea83';
+}
+
+.i-minimize::after {
+  content: '\ea84';
+}
+
+.i-mouse::after {
+  content: '\ea85';
+}
+
+.i-new-document::after {
+  content: '\ea86';
+}
+
+.i-new-folder::after {
+  content: '\ea87';
+}
+
+.i-new-window::after {
+  content: '\ea88';
+}
+
+.i-no-parking::after {
+  content: '\ea89';
+}
+
+.i-notes::after {
+  content: '\ea8a';
+}
+
+.i-notice::after {
+  content: '\ea8b';
+}
+
+.i-notifications-off::after {
+  content: '\ea8c';
+}
+
+.i-notifications::after {
+  content: '\ea8d';
+}
+
+.i-parking::after {
+  content: '\ea8e';
+}
+
+.i-pause-circle::after {
+  content: '\ea8f';
+}
+
+.i-pause::after {
+  content: '\ea90';
+}
+
+.i-photo-camera::after {
+  content: '\ea91';
+}
+
+.i-play-circle::after {
+  content: '\ea92';
+}
+
+.i-play-file::after {
+  content: '\ea93';
+}
+
+.i-play::after {
+  content: '\ea94';
+}
+
+.i-plug::after {
+  content: '\ea95';
+}
+
+.i-position::after {
+  content: '\ea96';
+}
+
+.i-print::after {
+  content: '\ea97';
+}
+
+.i-reload::after {
+  content: '\ea98';
+}
+
+.i-repair::after {
+  content: '\ea99';
+}
+
+.i-save::after {
+  content: '\ea9a';
+}
+
+.i-search::after {
+  content: '\ea9b';
+}
+
+.i-send::after {
+  content: '\ea9c';
+}
+
+.i-share::after {
+  content: '\ea9d';
+}
+
+.i-shoppingcart::after {
+  content: '\ea9e';
+}
+
+.i-shovel::after {
+  content: '\ea9f';
+}
+
+.i-slack::after {
+  content: '\eaa0';
+}
+
+.i-sound-decrease::after {
+  content: '\eaa1';
+}
+
+.i-sound-increase::after {
+  content: '\eaa2';
+}
+
+.i-sound-off::after {
+  content: '\eaa3';
+}
+
+.i-speed-00::after {
+  content: '\eaa4';
+}
+
+.i-speed-1::after {
+  content: '\eaa5';
+}
+
+.i-speed-100::after {
+  content: '\eaa6';
+}
+
+.i-speed-2::after {
+  content: '\eaa7';
+}
+
+.i-speed-25::after {
+  content: '\eaa8';
+}
+
+.i-speed-3::after {
+  content: '\eaa9';
+}
+
+.i-speed-4::after {
+  content: '\eaaa';
+}
+
+.i-speed-5::after {
+  content: '\eaab';
+}
+
+.i-speed-50::after {
+  content: '\eaac';
+}
+
+.i-speed-6::after {
+  content: '\eaad';
+}
+
+.i-speed-7::after {
+  content: '\eaae';
+}
+
+.i-speed-75::after {
+  content: '\eaaf';
+}
+
+.i-star::after {
+  content: '\eab0';
+}
+
+.i-stop-circle::after {
+  content: '\eab1';
+}
+
+.i-stop::after {
+  content: '\eab2';
+}
+
+.i-suitcase::after {
+  content: '\eab3';
+}
+
+.i-sustainability::after {
+  content: '\eab4';
+}
+
+.i-tablet::after {
+  content: '\eab5';
+}
+
+.i-target::after {
+  content: '\eab6';
+}
+
+.i-thermometer-high::after {
+  content: '\eab7';
+}
+
+.i-thermometer-low::after {
+  content: '\eab8';
+}
+
+.i-thermometer::after {
+  content: '\eab9';
+}
+
+.i-triangle::after {
+  content: '\eaba';
+}
+
+.i-truck::after {
+  content: '\eabb';
+}
+
+.i-twitter::after {
+  content: '\eabc';
+}
+
+.i-upload-2::after {
+  content: '\eabd';
+}
+
+.i-upload::after {
+  content: '\eabe';
+}
+
+.i-usb::after {
+  content: '\eabf';
+}
+
+.i-user-accept::after {
+  content: '\eac0';
+}
+
+.i-user-add::after {
+  content: '\eac1';
+}
+
+.i-user-decline::after {
+  content: '\eac2';
+}
+
+.i-user-delete::after {
+  content: '\eac3';
+}
+
+.i-user-group::after {
+  content: '\eac4';
+}
+
+.i-user::after {
+  content: '\eac5';
+}
+
+.i-visible::after {
+  content: '\eac6';
+}
+
+.i-wifi::after {
+  content: '\eac7';
+}
+
+.i-workshop::after {
+  content: '\eac8';
+}
+
+.i-zoom-in::after {
+  content: '\eac9';
+}
+
+.i-zoom-out::after {
+  content: '\eaca';
+}

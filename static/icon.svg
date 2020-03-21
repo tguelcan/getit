@@ -1,0 +1,10 @@
+    <svg viewBox="0 0 100 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="GroupUI_Logo_16_8_2018" fill-rule="nonzero">
+                <ellipse id="Oval-Copy-9" fill="#656E73" style="mix-blend-mode: multiply;" cx="75" cy="25.5" rx="25" ry="25.5"></ellipse>
+                <rect id="Rectangle-Copy-9" fill="#80B0C8" x="0" y="0" width="50" height="51"></rect>
+                <polygon id="Triangle-Copy-9" fill="#A21E4D" style="mix-blend-mode: multiply;" points="50 0 75 51 25 51"></polygon>
+                <polygon id="Triangle-Copy-9" fill="#A21E4D" points="50 0 75 51 50 51"></polygon>
+            </g>
+        </g>
+    </svg>

@@ -1,0 +1,587 @@
+// * ----------------------------
+// * VWAG Design Variables
+// * ----------------------------
+
+// * Globals
+// * ----------------------------
+$colors: (
+  primary: #004666,
+  primary100: #037da6,
+  primary300: #005475,
+  secondary: #006384,
+  tertiary: #002d42,
+  success: #95a844,
+  success300: #a3b562,
+  warning: #d8aa00,
+  warning300: #e3b839,
+  info: #80b0c8,
+  info300: #94bed1,
+  danger: #a21e4d,
+  danger300: #bd2d5f,
+  light: #edf0f2,
+  neutral: #a8adb3,
+  neutral200: #dadde0,
+  grey: #787b80,
+  dark: #34393b,
+  subtle: #4c5356,
+  white: #ffffff,
+  black: #000000,
+  shadow: #bdc1c7,
+  uberdanger: #da0c1f,
+  caution: #fccd22,
+  successful: #64a844,
+  attention: #eb6d20
+);
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+// GroupUI Frame settings
+$gui: (
+  body-bg-color: color(light),
+  body-text-color: color(dark),
+  body-text-color-negative: color(white),
+  font-path: './theme/vwag/fonts/',
+  iconfont-path: './theme/vwag/fonts/iconfont/',
+  preloader-path: './theme/vwag/svg/preloader/'
+);
+
+// Font
+$font-family-base: 'VWAGTheSans-Regular', 'HelveticaNeue', 'Helvetica Neue',
+  Helvetica, Arial, sans-serif; // default fonts
+$font-family-bold: 'VWAGTheSans-Bold', 'HelveticaNeue', 'Helvetica Neue',
+  Helvetica, Arial, sans-serif;
+$font-family-light: 'VWAGTheSans-Light', 'HelveticaNeue', 'Helvetica Neue',
+  Helvetica, Arial, sans-serif;
+$font-family-italic: 'VWAGTheSans-Italic', 'HelveticaNeue', 'Helvetica Neue',
+  Helvetica, Arial, sans-serif;
+$font-family-serif-base: 'VWAGTheAntiqua-Regular', 'TimesNewRoman',
+  'Times New Roman', Times, serif; // default serif fonts
+$font-family-serif-bold: 'VWAGTheAntiqua-Bold', 'TimesNewRoman',
+  'Times New Roman', Times, serif;
+$font-family-serif-italic: 'VWAGTheAntiqua-Italic', 'TimesNewRoman',
+  'Times New Roman', Times, serif;
+// Font Collections
+$fontcollection-the-sans-map: (
+  Regular: $font-family-base,
+  Light: $font-family-light,
+  Bold: $font-family-bold,
+  Italic: $font-family-italic
+);
+
+$fontcollection-the-antiqua-map: (
+  Regular: $font-family-serif-base,
+  Bold: $font-family-serif-bold,
+  Italic: $font-family-serif-italic
+);
+
+// Icons
+$icon-font-size: 24px;
+
+// Grid breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1480px
+);
+
+// Base font styles
+$base-font-family: $font-family-light;
+$base-font-size: 18px;
+$base-line-height: 27px;
+$base-letter-spacing: 0.6px;
+
+$base-font-family-small: $font-family-base !default;
+$base-font-size-small: 16px !default;
+$base-line-height-small: 24px !default;
+$base-letter-spacing-small: 0.6px !default;
+
+// width of the content-container
+$base-boxed-container-breakpoint: 'xl';
+$base-boxed-container-size: map-get(
+  $breakpoints,
+  $base-boxed-container-breakpoint
+);
+
+//Links
+
+$base-link-color: color(secondary);
+$base-link-color-hover: color(primary);
+$base-link-font-family: $font-family-bold;
+
+// Caption
+
+$caption-line-height: 18px;
+$caption-letter-spacing: 0.8px;
+$caption-font-family: $font-family-bold;
+$caption-color: color(dark);
+$caption-font-size: 14px;
+
+// Grid
+// Distance Values
+$distance-values: (
+  small: 8px,
+  medium: 16px,
+  large: 24px
+);
+
+//Shadows
+$base-box-shadow: 0 2px 4px 0 rgba(color(grey), 0.1),
+  0 3px 4px 0 rgba(color(grey), 0.08), 0 1px 5px 0 rgba(color(grey), 0.1);
+$extended-box-shadow: 0 12px 17px 2px rgba(color(grey), 0.14),
+  0 5px 22px 4px rgba(color(grey), 0.12), 0 7px 8px 0 rgba(color(grey), 0.2);
+
+$columns: 12;
+
+// prettier-ignore
+$gutters: (
+  xs: 16px,
+  sm: 16px,
+  md: 24px,
+  lg: 24px,
+  xl: 24px,
+  xxl: 24px
+);
+
+// prettier-ignore
+$grid-container-padding-h: (
+  xs: map-get($gutters, "xs"),
+  sm: map-get($gutters, "sm"),
+  md: map-get($gutters, "md"),
+  lg: map-get($gutters, "lg"),
+  xl: map-get($gutters, "xl"),
+  xxl: map-get($gutters, "xxl")
+);
+
+// Headings
+// Heading Font Size Map
+// prettier-ignore
+$heading-font-sizes: (
+  h1: (
+    xs: 96px, sm: 96px, md: 96px, lg: 96px, xl: 96px, xxl: 96px
+  ),
+  h2: (
+    xs: 60px, sm: 60px, md: 60px, lg: 60px, xl: 60px, xxl: 60px
+  ),
+  h3: (
+    xs: 48px, sm: 48px, md: 48px, lg: 48px, xl: 48px, xxl: 48px
+  ),
+  h4: (
+    xs: 36px, sm: 36px, md: 36px, lg: 36px, xl: 36px, xxl: 36px
+  ),
+  h5: (
+    xs: 28px, sm: 28px, md: 28px, lg: 28px, xl: 28px, xxl: 28px
+  ),
+  h6: (
+    xs: 20px, sm: 20px, md: 20px, lg: 20px, xl: 20px, xxl: 20px
+  )
+);
+
+// Heading Line Height Map
+// prettier-ignore
+$heading-line-heights: (
+  h1: (
+    xs: 120px, sm: 120px, md: 120px, lg: 120px, xl: 120px, xxl: 120px
+  ),
+  h2: (
+    xs: 75px, sm: 75px, md: 75px, lg: 75px, xl: 75px, xxl: 75px
+  ),
+  h3: (
+    xs: 60px, sm: 60px, md: 60px, lg: 60px, xl: 60px, xxl: 60px
+  ),
+  h4: (
+    xs: 45px, sm: 45px, md: 45px, lg: 45px, xl: 45px, xxl: 45px
+  ),
+  h5: (
+    xs: 35px, sm: 35px, md: 35px, lg: 35px, xl: 35px, xxl: 35px
+  ),
+  h6: (
+    xs: 25px, sm: 25px, md: 25px, lg: 25px, xl: 25px, xxl: 25px
+  )
+);
+
+// Heading Antiqua Font Map
+$heading-font-family-antiqua: (
+  h1: $font-family-serif-base,
+  h2: $font-family-serif-base,
+  h3: $font-family-serif-base,
+  h4: $font-family-serif-base,
+  h5: $font-family-serif-base,
+  h6: $font-family-serif-bold
+);
+
+// Heading Sans Font Map
+$heading-font-family-sans: (
+  h1: $font-family-light,
+  h2: $font-family-light,
+  h3: $font-family-base,
+  h4: $font-family-base,
+  h5: $font-family-base,
+  h6: $font-family-bold
+);
+
+// Heading Font Map
+$heading-font-map: $heading-font-family-sans;
+
+// Heading Color Map
+$heading-color-map: (
+  h1: color(grey),
+  h2: color(grey),
+  h3: color(dark),
+  h4: color(dark),
+  h5: color(dark),
+  h6: color(dark)
+);
+
+// Heading Letter Map
+// prettier-ignore
+$heading-letter-spacing: (
+  h1: (
+    xs: normal, sm: normal, md: normal, lg: normal, xl: normal, xxl: normal
+  ),
+  h2: (
+    xs: 0.2px, sm: 0.2px, md: 0.2px, lg: 0.2px, xl: 0.2px, xxl: 0.2px
+  ),
+  h3: (
+    xs: 0.2px, sm: 0.2px, md: 0.2px, lg: 0.2px, xl: 0.2px, xxl: 0.2px
+  ),
+  h4: (
+    xs: 0.4px, sm: 0.4px, md: 0.4px, lg: 0.4px, xl: 0.4px, xxl: 0.4px
+  ),
+  h5: (
+    xs: 0.4px, sm: 0.4px, md: 0.4px, lg: 0.4px, xl: 0.4px, xxl: 0.4px
+  ),
+  h6: (
+    xs: 0.6px, sm: 0.6px, md: 0.6px, lg: 0.6px, xl: 0.6px, xxl: 0.6px
+  )
+);
+
+// * Components
+// * ----------------------------
+// Accordion
+$accordion-li-border: 1px solid color(neutral200);
+$accordion-title-color: color(dark);
+$accordion-title-icon-color: color(grey);
+$accordion-title-font-family: $font-family-base;
+$accordion-title-padding-left: 0px;
+$accordion-title-font-size: 20px;
+$accordion-title-icon-font-size: 32px;
+$accordion-title-sm-padding-h: 16px;
+$accordion-title-sm-padding-h: 16px;
+$accordion-title-md-padding-top: 24px;
+$accordion-title-md-padding-bottom: 24px;
+$accordion-is-open-title-sm-padding-bottom: 16px;
+$accordion-is-open-title-md-padding-bottom: 24px;
+$accordion-is-open-sm-padding-bottom: 16px;
+$accordion-is-open-md-padding-bottom: 24px;
+$accordion-title-height: 32px;
+$accordion-title-padding-right: 48px !default;
+$accordion-icon-after-closed: 'i-dropdown-closed' !default;
+$accordion-icon-after-open: 'i-dropdown-open' !default;
+$accordion-title-icon-right: 8px !default;
+
+// Actionbar
+$actionbar-alt-bg-color: color(white) !default;
+$actionbar-alt-color: color(dark) !default;
+$actionbar-alt-btn-color: color(primary) !default;
+$actionbar-alt-btn-bg-color: color(white) !default;
+$actionbar-alt-btn-hover-color: color(dark) !default;
+$actionbar-alt-btn-grp-border: 1px solid color(neutral200) !default;
+
+// Breadcrumbs
+$breadcrumb-color-default: color(primary100);
+
+// Buttons
+$btn-primary-bg-color-pressed: color(primary100);
+$btn-secondary-bg-color-hover: color(neutral200);
+$btn-tertiary-bg-color-pressed: color(primary100);
+$btn-disable-color: color(neutral200);
+$btn-disable-border-color: solid 1px color(neutral200);
+$btn-shadow-value: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+$btn-tertiary-bg-color: transparent !default;
+$btn-tertiary-bg-color-hover: color(secondary) !default;
+$btn-tertiary-bg-color-pressed: lighten(color(primary), 20%) !default;
+$btn-tertiary-color: color(primary) !default;
+$btn-tertiary-color-hover: color(white) !default;
+$btn-tertiary-outline: solid 1px color(primary) !default;
+$btn-flat-bg-color: color(white) !default;
+$btn-flat-color: color(primary) !default;
+$btn-flat-bg-color-active: color(light) !default;
+$btn-flat-outline: solid 0px color(black) !default;
+$btn-select-padding-right: 48px !default;
+$btn-select-icon-right: 16px !default;
+$btn-group-shadow: $btn-shadow-value !default;
+$btn-group-border: none !default;
+$btn-group-border-radius: 2px !default;
+$btn-group-background-color: color(white) !default;
+$btn-group-color: color(grey) !default;
+$btn-group-icons-btn-width: 40px !default;
+
+// Calendar
+$calendar-prev-icon: 'i-arrow-left';
+$calendar-next-icon: 'i-arrow-right';
+$calendar-arrow-icon: 'i-forwards';
+$calendar-checkmark-icon: 'i-check-circle';
+$calendar-day-holiday-background-image: repeating-linear-gradient(
+  45deg,
+  transparent,
+  transparent 5px,
+  color(neutral200) 5px,
+  color(neutral200) 6px
+);
+$calendar-header-border: 1px solid color(shadow);
+$calendar-checkmark-color: color(successful);
+$calendar-input-focus-background-color: color(light);
+$calendar-input-font-color: color(dark);
+
+// Card
+$card-bg-color: color(white);
+$card-content-pad: 24px 16px;
+
+// Dropdown
+$dropdown-select-icon: 'i-dropdown-closed';
+
+// Footer
+$footer-width: 100% !default;
+$footer-link-color: color(white) !default;
+$footer-top-bg-color: color(primary) !default;
+$footer-bottom-bg-color: color(white) !default;
+$footer-bottom-height: 120px !default;
+$footer-font-family: $font-family-bold !default;
+$footer-font-size: 16px !default;
+$footer-logo-height: 40px !default;
+$footer-logo-margin: 40px 0 !default;
+$footer-list-padding: 8px 32px !default;
+$footer-listitem-height: 24px !default;
+$footer-listitem-padding: 8px 0 !default;
+$footer-listitem-bullet-padding: 0 16px !default;
+
+// Form
+$form-border-radius: 2px;
+$form-resize: none;
+$form-bg-color: color(white);
+$form-color: color(dark);
+$form-color-focus: color(dark);
+$form-border-color: color(shadow);
+$form-border-color-hover: color(secondary);
+$form-border-color-focus: color(primary);
+$form-font-size: 16px;
+$form-font: $font-family-base;
+$form-select-inactive-color: color(shadow);
+$form-select-icon: 'i-dropdown-closed';
+$form-checkbox-checked-icon-color: color(white);
+$form-checkbox-radio-color: color(secondary);
+$form-checkbox-radio-color-hover: color(primary);
+$form-checkbox-radio-background-color: color(white);
+$form-input-default-icon-color: color(grey);
+$form-input-default-icon-color-hover: color(secondary);
+$form-input-danger-color: color(uberdanger);
+$form-input-danger-color-hover: color(uberdanger);
+$form-input-success-color: color(successful);
+$form-input-success-color-hover: color(successful);
+$form-input-warning-color: color(caution);
+$form-input-warning-color-hover: color(caution);
+$form-checkbox-radio-inactive-border-color: color(shadow);
+$form-checkbox-radio-inactive-background-color: color(light);
+$form-checkbox-radio-inactive-checked-background-color: color(shadow);
+$form-checkbox-icon: 'i-check';
+$form-input-inactive-color: color(shadow);
+$form-input-inactive-background-color: color(light);
+$form-inline-label-background-color: color(light);
+$form-inline-label-color: color(grey);
+$form-switch-paddle-color: color(white);
+$form-switch-background-color: color(white);
+$form-switch-border-color: color(neutral200);
+$form-switch-active-background-color: color(info);
+$form-switch-inactive-background-color: color(light);
+$form-switch-inactive-paddle-color: color(neutral200);
+$form-switch-android-background-color: color(shadow);
+$form-switch-android-inactive-background-color: color(neutral200);
+$form-switch-android-inactive-paddle-color: color(shadow);
+
+// Label
+$label-font-size: 14px;
+
+// List
+$list-item-link-icon: 'i-arrow-right';
+
+// Media
+$media-chat-heading-font-family: $font-family-base !default;
+
+// Modal
+$modal-content-width: (
+  xs: 160px,
+  sm: 560px,
+  md: 800px,
+  lg: 1040px,
+  xl: 1200px,
+  xxl: 1480px
+);
+$modal-background-color: rgba(color(primary), 0.9);
+$modal-close-icon: 'i-close';
+$modal-close-icon-color: color(primary);
+$modal-content-margin: 80px;
+$modal-content-padding: 24px;
+$modal-title-font-family: $font-family-bold;
+$modal-title-font-size: 24px;
+$modal-title-color: color(dark);
+$modal-title-letter-spacing: -0.58px;
+$modal-title-letter-height: 29px;
+
+// Navbar
+$navbar-arrow-icon: 'i-dropdown-closed';
+$navbar-item-level-1-text-transform: none;
+$navbar-item-level-1-is-active-font-family: $font-family-bold;
+$navbar-item-level-1-is-active-no-sub-background: color(primary100);
+$navbar-item-level-1-is-active-background: color(primary100);
+$navbar-item-level-1-is-open-background: color(primary300);
+$navbar-item-level-2-background: color(primary300);
+$navbar-item-level-2-is-active-background: color(primary100);
+$navbar-item-level-2-hover-background: color(secondary);
+$navbar-item-level-3-background: color(secondary);
+$navbar-item-level-3-is-active-background: color(primary100);
+$navbar-item-level-3-is-active-font-family: $font-family-base;
+$navbar-lg-list-margin-horizontal: 56px;
+$navbar-boxed-width: $base-boxed-container-size;
+
+// Notifications
+$notification-types-bg-color: (
+  primary: color(primary),
+  default: color(primary),
+  successful: color(successful),
+  caution: color(caution),
+  uberdanger: color(uberdanger),
+  attention: color(attention)
+);
+$notification-close-icon: 'i-close';
+$notification-progress-bg-color: color(primary100);
+$notification-font-size: 16px;
+$notification-font-color-default: color(white);
+$notification-font-color-negative: color(dark);
+
+// Pagination
+$pagination-prev-icon: 'i-arrow-left';
+$pagination-next-icon: 'i-arrow-right';
+$pagination-select-icon-arrow: 'i-dropdown-closed';
+
+// Progress
+$progress-circular-stroke-color: (
+  primary: color(primary),
+  secondary: color(secondary),
+  info: color(info),
+  success: color(success),
+  danger: color(danger),
+  warning: color(warning),
+  uberdanger: color(uberdanger),
+  caution: color(caution),
+  successful: color(successful),
+  attention: color(attention)
+);
+$progress-background-color: color(neutral200);
+$progress-circular-stroke-color-background: color(neutral200);
+$progress-circular-stroke-linecap: round;
+$progress-dotted-is-done-dots-icon: 'i-check';
+$progress-dotted-is-done-label-font-color: color(grey);
+$progress-dotted-is-open-label-font-color: color(shadow);
+
+// Sidenav
+$sidenav-width: 240px;
+$sidenav-ul-mar: 0;
+$sidenav-ul-pad: 0;
+$sidenav-bg-color: color(white);
+$sidenav-item-a-pad-top: 12px;
+$sidenav-item-a-pad-right: 32px;
+$sidenav-item-a-pad-bottom: 12px;
+$sidenav-item-a-pad-left: 24px;
+$sidenav-item-a-pad: $sidenav-item-a-pad-top $sidenav-item-a-pad-right
+  $sidenav-item-a-pad-bottom $sidenav-item-a-pad-left;
+$sidenav-has-drawer: true;
+$sidenav-close-icon: 'i-close';
+$sidenav-back-icon: 'i-arrow-left';
+$sidenav-forward-icon: 'i-arrow-right';
+$sidenav-opener-open-icon: 'i-dropdown-open';
+$sidenav-opener-closed-icon: 'i-dropdown-closed';
+$sidenav-close-back-background-color: rgba(color(primary100), 0.08);
+$sidenav-item-active-color: color(primary100);
+$sidenav-current-marker-background: color(primary100);
+$sidenav-close-back-color: color(primary100);
+$sidenav-item-active-font: $font-family-base;
+$sidenav-two-level-width: 240px;
+$sidenav-two-level-ul-mar: 0;
+$sidenav-two-level-ul-mar-left: 8px;
+$sidenav-two-level-ul-pad: 0;
+$sidenav-two-level-bg-color: color(white);
+$sidenav-two-level-list-mar-top: 16px;
+$sidenav-two-level-item-height: 24px;
+$sidenav-two-level-item-pad: 12px 32px 12px 24px;
+$sidenav-two-level-font-family: $font-family-base;
+$sidenav-two-level-font-size: 16px;
+$sidenav-two-level-letter: 0.6px;
+$sidenav-two-level-line-height: 24px;
+$sidenav-two-level-text-transform: uppercase;
+$sidenav-two-level-color: color(dark);
+$sidenav-two-level-bg-hover: color(info);
+$sidenav-two-level-has-sub-after-color: color(secondary);
+$sidenav-two-level-sublist-item-height: 40px;
+$sidenav-two-level-item-sub-pad: 8px 16px 8px 32px;
+$sidenav-two-level-sublist-bg-hover: color(primary100);
+$sidenav-two-level-has-drawer: true;
+
+// Slider / Rangeslider
+$slider-track-background: color(neutral200) !default;
+
+// Subtitles
+$subtitle-font-size: 24px;
+$subtitle-line-height: 30px;
+$subtitle-letter-spacing: 0.4px;
+$subtitle-font: $font-family-light;
+$subtitle-color: color(grey);
+$subtitle-small-font-size: 20px !default;
+$subtitle-small-line-height: 25px !default;
+$subtitle-small-letter-spacing: 0.6px !default;
+$subtitle-small-font: $font-family-light !default;
+$subtitle-small-color: color(grey) !default;
+
+// Table
+$table-border-color: color(neutral200);
+$table-first-th-td-padding-left: 24px;
+$table-second-td-th-padding-left: 24px;
+$table-th-padding-right: 24px;
+$table-td-padding-right: 24px;
+
+// Tabs
+$tabs-tab-small-height: 40px !default;
+$tabs-tab-small-line-height: 40px !default;
+
+// Tags
+$tag-colors: (
+  primary: color(primary),
+  secondary: color(secondary),
+  tertiary: color(tertiary),
+  success: color(success),
+  warning: color(warning),
+  info: color(info),
+  danger: color(danger),
+  neutral200: color(neutral200),
+  uberdanger: color(uberdanger),
+  caution: color(caution),
+  successful: color(successful),
+  attention: color(attention)
+);
+$tag-background-color-default: map-get($tag-colors, 'neutral200');
+
+// Taskbar
+$taskbar-bg-color: color(tertiary);
+$taskbar-color: color(white);
+$taskbar-select-icon: 'i-dropdown-closed';
+$taskbar-boxed-width: $base-boxed-container-size;
+$taskbar-box-shadow: none;
+$taskbar-bright-exists: true;

@@ -1,0 +1,25 @@
+{
+  "navigationContent": [
+    {
+      "name": "News",
+      "route": "/",
+      "icon": "home",
+      "exact": true
+    },
+    {
+      "name": "Fabrik",
+      "route": "/",
+      "icon": "factory"
+    },
+    {
+      "name": "Dokumente",
+      "route": "/",
+      "icon": "inbox"
+    },
+    {
+      "name": "Profil",
+      "route": "/profile",
+      "icon": "user"
+    }
+  ]
+}
