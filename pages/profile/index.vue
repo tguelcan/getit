@@ -1,17 +1,33 @@
 <template>
     <div class="container mx-auto">
-        <card>Profile</card>
+        <g-card
+            >{{ $store.state.user }}
+            <g-button class="mt-3" @click="logoutUser">
+                Logout
+            </g-button></g-card
+        >
     </div>
 </template>
 
 <script>
-import card from '@/components/molecules/card'
+import { mapActions } from 'vuex'
+import gCard from '@/components/molecules/card'
+import gButton from '@/components/molecules/button'
 export default {
     name: 'Profil',
+    middleware: 'authenticated',
     components: {
-        card
+        gCard,
+        gButton
     },
-    data: () => ({})
+    data: () => ({}),
+    methods: {
+        ...mapActions(['logout']),
+        async logoutUser() {
+            await this.logout()
+            await this.$router.push('/login')
+        }
+    }
 }
 </script>
 

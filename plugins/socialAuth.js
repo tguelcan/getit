@@ -1,10 +1,11 @@
 import hello from 'hellojs'
 
+console.log(process.env.facebookId)
+
 hello.init(
     {
         facebook: process.env.facebookId,
-        google: process.env.googleId,
-        github: process.env.githubId
+        google: process.env.googleId
     },
     {
         redirect_uri: '/callback'

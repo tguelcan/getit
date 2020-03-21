@@ -1,3 +1,9 @@
+/*
+ ** Access to ENV variables
+ */
+
+require('dotenv').config()
+
 export default {
     mode: 'universal',
     /*
@@ -59,6 +65,18 @@ export default {
         mode: process.env.NODE_ENV,
         masterKey: process.env.MASTER_KEY,
         appUrl: process.env.APP_URL || 'http://localhost:3000'
+    },
+
+    /*
+     ** Axios module configuration
+     */
+    axios: {
+        // See https://github.com/nuxt-community/axios-module#options
+        proxy: true
+    },
+
+    proxy: {
+        '/api': { target: process.env.API_URL }
     },
 
     /*
@@ -126,11 +144,6 @@ export default {
         // Will register redirect-ssl npm package
         'redirect-ssl'
     ],
-    /*
-     ** Axios module configuration
-     ** See https://axios.nuxtjs.org/options
-     */
-    axios: {},
     /*
      ** Build configuration
      */

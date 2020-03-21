@@ -55,18 +55,19 @@
                 </div>
             </div>
         </div>
+        <!--
         <div class="w-full bg-white py-10">
             <g-brand :width="200" />
         </div>
-    </div>
+    --></div>
 </template>
 
 <script>
-import gBrand from '@/components/molecules/brand'
+// import gBrand from '@/components/molecules/brand'
 import gButton from '@/components/molecules/button'
 export default {
     components: {
-        gBrand,
+        // gBrand,
         gButton
     }
 }
