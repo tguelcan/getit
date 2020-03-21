@@ -14,21 +14,23 @@
                     <h2
                         class="text-3xl leading-9 font-bold tracking-tight text-primary sm:text-4xl sm:leading-10 my-2"
                     >
-                        GroupUI
+                        Get It!
                         <span
                             class="inline-block align-top font-light text-secondary text-xl leading-snug"
-                            >Alternate</span
+                            >Delivery</span
                         >
                         <br />
                     </h2>
 
                     <p>
-                        We follow the concept of using atoms, molecules and
-                        organisms. Alternate is based on the "utility first"
-                        approach. This is a highly customizable, low-level CSS
-                        framework that gives you all of the building blocks you
-                        need to build bespoke designs without any annoying
-                        opinionated styles you have to fight to override.
+                        Local Stores sell local goods to local clients brought
+                        to them by local delivery services which are organized
+                        by an intelligent ride sharing algorithm. Most of the
+                        small commercials fear the loss of clients, so we bring
+                        their goods to the clients directly by intelligently
+                        hailing the delivery rides. This leads to localized
+                        delivery services combined with lowest environmental
+                        burden.
                     </p>
                     <g-install />
                 </div>
