@@ -29,7 +29,7 @@ export const actions = {
     async nuxtServerInit({ commit, dispatch }, { app }) {
         try {
             // Set SSR Token
-            const accessToken = await this.$cookies.get('tts')
+            const accessToken = await this.$cookies.get('getit')
             app.$axios.setToken(accessToken, 'Bearer')
             commit('setToken', accessToken)
             // Get User Informations
@@ -70,7 +70,7 @@ export const actions = {
     async setLocalUser({ commit }, { token, user }) {
         // Set CSR Token
         await this.$axios.setToken(token, 'Bearer')
-        await this.$cookies.set('tts', token, {
+        await this.$cookies.set('getit', token, {
             path: '/',
             maxAge: 60 * 60 * 24 * 7
         })
@@ -103,7 +103,7 @@ export const actions = {
     },
     async logout({ commit }) {
         await this.$axios.setToken(false)
-        await this.$cookies.remove('tts')
+        await this.$cookies.remove('getit')
         commit('setToken', null)
     },
     async getMe({ commit, dispatch }) {
