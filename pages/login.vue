@@ -20,10 +20,7 @@
             </p>
             <div class="flex flex-wrap mb-3">
                 <div class="w-full">
-                    <g-button
-                        class="items-center my-1"
-                        @click="$router.push('/signin')"
-                    >
+                    <g-button class="items-center my-1" disabled>
                         Login with E-Mail
                     </g-button>
                 </div>
