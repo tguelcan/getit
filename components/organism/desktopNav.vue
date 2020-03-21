@@ -9,7 +9,7 @@
                 <nuxt-link to="/">
                     <span
                         class="brand align-middle font-bold text-2xl select-none"
-                        >GroupUI</span
+                        >Get It!</span
                     >
                 </nuxt-link>
             </div>

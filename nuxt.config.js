@@ -4,7 +4,7 @@ export default {
      ** Headers of the page
      */
     head: {
-        title: process.env.npm_package_name || 'GroupUI Alternate',
+        title: process.env.npm_package_name || 'Get It!',
         meta: [
             { charset: 'utf-8' },
             {
@@ -45,21 +45,41 @@ export default {
         linkActiveClass: 'link-active',
         linkExactActiveClass: 'link-active'
     },
+
+    /*
+     ** Env Settings
+     */
+    env: {
+        facebookId: process.env.FACEBOOK_ID,
+        googleId: process.env.GOOGLE_ID,
+        githubId: process.env.GITHUB_ID,
+        contentfulSpaceId: process.env.CONTENTFUL_SPACE_ID,
+        contentfulAccessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        oneSignal: process.env.ONE_SIGNAL,
+        mode: process.env.NODE_ENV,
+        masterKey: process.env.MASTER_KEY,
+        appUrl: process.env.APP_URL || 'http://localhost:3000'
+    },
+
     /*
      ** Plugins to load before mounting the App
      */
     plugins: [
         '@/plugins/utils.js',
+        '@/plugins/contentful.js',
         { src: '@/plugins/axios', ssr: true },
         { src: '@/plugins/validate.js', ssr: false },
-        { src: '@/plugins/localStorage.js', ssr: false }
+        { src: '@/plugins/localStorage.js', ssr: false },
+        { src: '@/plugins/socialAuth', ssr: false }
     ],
+
     /*
      ** Nuxt.js dev-modules
      */
     buildModules: [
         // Doc: https://github.com/nuxt-community/eslint-module
         '@nuxtjs/eslint-module',
+        '@nuxtjs/dotenv',
         // Doc: https://github.com/nuxt-community/stylelint-module
         '@nuxtjs/stylelint-module',
         // Doc: https://github.com/nuxt-community/nuxt-tailwindcss

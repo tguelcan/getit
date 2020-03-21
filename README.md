@@ -1,8 +1,4 @@
-<img src="http://groupui.herokuapp.com/img/mocks.png" width="450" />
-
-# GroupUI Alternate
-
-> GroupUI Tailwind Starter
+# Get It!
 
 ## Build Setup
 
