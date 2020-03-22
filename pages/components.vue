@@ -878,6 +878,7 @@ import gSearch from '@/components/templates/search'
 
 export default {
     name: 'Index',
+    middleware: ['authenticated'],
     components: {
         gCard,
         gButton,

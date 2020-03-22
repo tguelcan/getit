@@ -8,7 +8,7 @@
                         class="animated choose mt-4"
                         @click="updateUserAction('buyer')"
                     >
-                        <h2 class="text-primary">Brauchen</h2>
+                        <h2 class="text-primary cursor-pointer">Brauchen</h2>
                         Ich brauche etwas Du brauchst jemanden, der Deine
                         Einkäufe für dich erledigt oder mit Deinem Hund gassi
                         geht?
@@ -17,7 +17,7 @@
                         class="animated choose mt-4"
                         @click="updateUserAction('retailer')"
                     >
-                        <h2 class="text-primary">Haben</h2>
+                        <h2 class="text-primary cursor-pointer">Haben</h2>
                         Du hast ein lokales Geschäft und suchst nach Wegen,
                         Deine Waren ganz einfach online zu verkaufen?
                     </div>
@@ -26,7 +26,7 @@
                         class="animated choose mt-4"
                         @click="updateUserAction('distributor')"
                     >
-                        <h2 class="text-primary">Bringen</h2>
+                        <h2 class="text-primary cursor-pointer">Bringen</h2>
                         Du kannst mit deinem Auto, Fahrrad oder zu Fuß
                         Bestellungen abholen und ausliefern?
                     </div>
