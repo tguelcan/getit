@@ -178,8 +178,11 @@
                     <nuxt-link class="button button-link" to="/signin">
                         Account vorhanden?
                     </nuxt-link>
+                    <div class="w-full max-w-lg">
+                        <hr class="my-3" />
+                    </div>
+                    <logos />
                 </div>
-                <logos />
             </div>
         </div>
     </div>

@@ -95,18 +95,18 @@
                         </form>
                     </ValidationObserver>
                 </g-card>
-                <logos />
 
                 <!-- Error Messages -->
-
-                <div class="w-full max-w-lg">
-                    <hr class="mb-3" />
-                </div>
-                <div class="w-full max-w-lg text-center">
+                <div class="w-full max-w-lg text-center mt-3">
                     <nuxt-link class="button-link" to="/signup">
-                        Create a account
+                        Hier registrieren
                     </nuxt-link>
                 </div>
+                <div class="w-full max-w-lg">
+                    <hr class="my-3" />
+                </div>
+
+                <logos />
             </div>
         </div>
     </div>
