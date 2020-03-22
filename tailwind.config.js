@@ -82,7 +82,7 @@ module.exports = {
             black: '#000000',
             white: '#ffffff',
             primary: '#4068A3',
-            secondary: '#006384',
+            secondary: '#4a9bbb',
             tertiary: '#35578A',
             dark: '#34393B',
             subtle: '#4C5356',
