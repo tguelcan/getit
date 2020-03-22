@@ -2,10 +2,10 @@
     <div>
         <!-- Install Modal -->
         <g-modal
-            :show="showInstall"
+            :show="showInstall && installer"
             centered
             confirm-text="Installieren"
-            @confirm="confirmModal"
+            @confirm="installApp"
             @dismiss="showInstall = false"
             ><div class="flex flex-col">
                 <img
@@ -91,7 +91,7 @@ export default {
         bgOverlayColor: 'rgba(255,255,255,.6)',
         haveError: {},
         showInstall: false,
-        installer: undefined
+        installer: null
     }),
     mounted() {
         // show popup after 10 sek
@@ -134,6 +134,9 @@ export default {
                 this.isLoading = false
                 this.haveError = e?.error
             }
+        },
+        installApp() {
+            if (this.installer) return this.installer
         }
     },
     beforeRouteLeave(to, from, next) {
