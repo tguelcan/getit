@@ -1,20 +1,21 @@
 <template>
     <div class="container mx-auto sm:py-0 sm:px-0">
-        <!-- CTA Section -->
         <div
-            class="flex flex-wrap bg-light text-primary my-4 justify-center content-center text-center"
+            class="flex flex-wrap bg-light text-primary md:mt-4 justify-center text-center"
         >
             <div class="w-full md:w-2/3 xl:w-1/2 mx-1">
-                <div class="h-64 md:h-full">
-                    <g-input
-                        v-model="search"
-                        placeholder="Suche"
-                        type="text"
-                    ></g-input>
+                <div>
+                    <g-card>
+                        <g-input
+                            v-model="zip"
+                            placeholder="PLZ"
+                            type="text"
+                        ></g-input
+                    ></g-card>
                 </div>
             </div>
         </div>
-        <div class="flex flex-wrap justify-center content-center">
+        <div class="flex flex-wrap justify-center content-center mt-3">
             <div class="w-full md:w-2/3 xl:w-1/2 mx-1">
                 <g-card headline="Hello">asd</g-card>
             </div>
@@ -36,7 +37,7 @@ export default {
         // gButton
     },
     data: () => ({
-        search: '',
+        zip: '',
         showBackToTop: true
     }),
     methods: {
@@ -46,9 +47,3 @@ export default {
     }
 }
 </script>
-
-<style lang="scss" scoped>
-.box {
-    @apply m-3 p-6 rounded select-none;
-}
-</style>

@@ -6,12 +6,8 @@
       "exact": true
     },
     {
-      "name": "Kontakte",
-      "route": "/#"
-    },
-    {
-      "name": "Dokumente",
-      "route": "/#"
+      "name": "Einkaufslisten",
+      "route": "/list"
     }
   ],
   "rightNavigationContent": [

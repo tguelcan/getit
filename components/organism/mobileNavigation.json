@@ -1,20 +1,15 @@
 {
   "navigationContent": [
     {
-      "name": "News",
+      "name": "Einträge",
       "route": "/",
       "icon": "home",
       "exact": true
     },
     {
-      "name": "Fabrik",
-      "route": "/",
+      "name": "Einkaufslisten",
+      "route": "/list",
       "icon": "factory"
-    },
-    {
-      "name": "Dokumente",
-      "route": "/",
-      "icon": "inbox"
     },
     {
       "name": "Profil",
