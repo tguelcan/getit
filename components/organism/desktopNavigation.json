@@ -6,7 +6,7 @@
       "exact": true
     },
     {
-      "name": "Einkaufslisten",
+      "name": "Meine Listen",
       "route": "/list"
     }
   ],

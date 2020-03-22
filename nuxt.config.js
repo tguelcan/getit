@@ -86,6 +86,7 @@ export default {
         '@/plugins/utils.js',
         '@/plugins/contentful.js',
         { src: '@/plugins/axios', ssr: true },
+        { src: '~/plugins/vue-scroll-reveal', ssr: false },
         { src: '@/plugins/validate.js', ssr: false },
         { src: '@/plugins/localStorage.js', ssr: false },
         { src: '@/plugins/vue-timeago', ssr: false },

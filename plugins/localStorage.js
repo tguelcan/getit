@@ -13,7 +13,7 @@ export default ({ store, isHMR }) => {
         createPersistedState({
             key: 'getit',
             // Modules here like messages
-            paths: ['accessToken', 'user']
+            paths: ['accessToken', 'user', 'entries']
         })(store)
     })
 }

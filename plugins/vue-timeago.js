@@ -3,5 +3,5 @@ import VueTimeago from 'vue-timeago'
 
 Vue.use(VueTimeago, {
     name: 'Timeago',
-    locale: 'en'
+    locale: 'de'
 })
