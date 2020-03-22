@@ -1,7 +1,5 @@
 <template>
-    <div
-        class="flex flex-wrap items-center md:flex-no-wrap h-screen bg-warning"
-    >
+    <div class="flex flex-wrap items-center md:flex-no-wrap h-screen bg-white">
         <div class="w-full p-10 m-auto text-center">
             <h1 class="text-2xl text-primary font-bold">
                 Login, please wait.

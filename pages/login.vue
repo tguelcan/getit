@@ -23,9 +23,9 @@
         <div class="flex flex-wrap justify-center md:flex-no-wrap h-screen">
             <div class="w-full max-w-lg my-auto mx-3 text-center">
                 <img
-                    src="~assets/img/ordercar.svg"
+                    src="~assets/img/logo.svg"
                     alt=""
-                    width="200"
+                    width="180"
                     class="inline-block"
                 />
                 <g-card>
