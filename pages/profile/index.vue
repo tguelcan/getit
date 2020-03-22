@@ -32,7 +32,7 @@ import gAvatar from '@/components/molecules/avatar'
 
 export default {
     name: 'Profil',
-    middleware: 'authenticated',
+    middleware: ['authenticated'],
     components: {
         gCard,
         gButton,

@@ -46,7 +46,7 @@ import gInstall from '@/components/organism/install'
 
 export default {
     name: 'Index',
-    middleware: 'authenticated',
+    middleware: ['authenticated'],
     components: {
         gCard,
         // gButton,

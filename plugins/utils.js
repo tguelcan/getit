@@ -21,6 +21,9 @@ Vue.mixin({
             },
             250
         )
+        if (this.user.role === 'user') {
+            this.$router.push('/role')
+        }
     }),
     methods: {
         isEmpty(someObject) {
