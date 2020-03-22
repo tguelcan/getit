@@ -136,7 +136,7 @@ export default {
             }
         },
         installApp() {
-            if (this.installer) return this.installer
+            if (this.installer) return this.installer()
         }
     },
     beforeRouteLeave(to, from, next) {

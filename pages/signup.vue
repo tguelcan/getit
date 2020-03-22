@@ -24,7 +24,7 @@
                     >
                 </div>
                 <div class="mt-3 text-xl font-bold text-primary">
-                    Danke, dass du dich für Get it registriert hast um Menschen
+                    Danke, dass du dich für Get it registriert hast, um Menschen
                     in deiner Nähe zu helfen!
                 </div>
             </div>
