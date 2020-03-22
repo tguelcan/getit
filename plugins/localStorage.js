@@ -11,9 +11,9 @@ export default ({ store, isHMR }) => {
 
     window.onNuxtReady(() => {
         createPersistedState({
-            key: 'gui',
+            key: 'getit',
             // Modules here like messages
-            paths: ['']
+            paths: ['accessToken', 'user']
         })(store)
     })
 }

@@ -85,6 +85,13 @@ export const actions = {
             token: accessToken
         })
     },
+    async updateUserRole({ commit }, { id, role, accessToken }) {
+        await this.$axios.post(`/api/users/${id}`, {
+            name,
+            role,
+            token: accessToken
+        })
+    },
     async forgotPassword({ dispatch }, { email, link, accessToken }) {
         await this.$axios.post(`/api/password-resets`, {
             email,

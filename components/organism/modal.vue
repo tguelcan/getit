@@ -87,7 +87,7 @@ export default {
         },
         dismissText: {
             type: String,
-            default: 'Cancel'
+            default: 'Schließen'
         }
     },
     data: () => ({}),

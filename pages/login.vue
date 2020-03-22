@@ -1,5 +1,25 @@
 <template>
     <div>
+        <!-- Install Modal -->
+        <g-modal
+            :show="showInstall"
+            centered
+            confirm-text="Installieren"
+            @confirm="confirmModal"
+            @dismiss="showInstall = false"
+            ><div class="flex flex-col">
+                <img
+                    src="~assets/img/install.svg"
+                    width="300"
+                    alt=""
+                    class="mx-auto"
+                />
+                <div class="mt-4">
+                    Du kannst unsere Anwendung auch Installieren. Somit hast du
+                    sie jederzeit griffbereit!
+                </div>
+            </div>
+        </g-modal>
         <div class="flex flex-wrap justify-center md:flex-no-wrap h-screen">
             <div class="w-full max-w-lg my-auto mx-3 text-center">
                 <img
@@ -56,18 +76,46 @@ import { mapActions } from 'vuex'
 import gCard from '@/components/molecules/card'
 import gButton from '@/components/molecules/button'
 
+import gModal from '@/components/organism/modal'
+
 export default {
     middleware: 'notAuthenticated',
     layout: 'blanc',
     components: {
         gCard,
-        gButton
+        gButton,
+        gModal
     },
     data: () => ({
         isLoading: null,
         bgOverlayColor: 'rgba(255,255,255,.6)',
-        haveError: {}
+        haveError: {},
+        showInstall: false,
+        installer: undefined
     }),
+    mounted() {
+        // show popup after 10 sek
+        let installPrompt
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault()
+            installPrompt = e
+            this.showInstall = true
+        })
+        window.addEventListener('appinstalled', (evt) => {
+            this.status = 'already installed'
+        })
+        this.installer = () => {
+            this.showInstall = false
+            installPrompt.prompt()
+            installPrompt.userChoice.then((result) => {
+                if (result.outcome === 'accepted') {
+                    console.log('Install accepted!')
+                } else {
+                    console.log('Install denied!')
+                }
+            })
+        }
+    },
     methods: {
         ...mapActions(['loginWithSocial']),
         async socialLogin(provider) {
