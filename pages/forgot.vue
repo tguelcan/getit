@@ -1,10 +1,29 @@
 <template>
     <div>
+        <!-- Modal -->
+        <g-modal
+            :show="submitted"
+            centered
+            :dismiss="false"
+            @confirm="confirmModal"
+            ><div class="flex flex-col">
+                <img
+                    src="~assets/img/navigator.svg"
+                    width="300"
+                    alt=""
+                    class="mx-auto"
+                />
+                <div></div>
+                <div class="mt-5 text-xl font-bold text-primary">
+                    Eine E-Mail mit weiteren schritten wurde an dich versendet.
+                </div>
+            </div>
+        </g-modal>
         <div class="flex flex-wrap justify-center md:flex-no-wrap h-screen">
             <div class="w-full max-w-lg my-auto mx-3">
-                <div class="w-full">
+                <div class="w-full mb-2">
                     <nuxt-link to="/">
-                        Zurück
+                        <i class="icon i-arrow-left"></i>Zurück
                     </nuxt-link>
                 </div>
                 <g-card headline="Passwort anfordern">
@@ -74,6 +93,8 @@ import { mapActions } from 'vuex'
 import gCard from '@/components/molecules/card'
 import gButton from '@/components/molecules/button'
 
+import gModal from '@/components/organism/modal'
+
 export default {
     name: 'Signin',
     layout: 'blanc',
@@ -82,7 +103,8 @@ export default {
         ValidationObserver,
         ValidationProvider,
         gCard,
-        gButton
+        gButton,
+        gModal
     },
     data: () => ({
         submitted: false,

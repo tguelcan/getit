@@ -1,23 +1,25 @@
 <template>
     <div>
         <div class="flex flex-wrap justify-center md:flex-no-wrap h-screen">
-            <div class="w-full max-w-lg my-auto mx-3">
-                <!-- 
-            <img
-                src="~assets/img/logo_text.svg"
-                alt=""
-                width="100"
-                class="inline-block"
-            />-->
+            <div class="w-full max-w-lg my-auto mx-3 text-center">
+                <img
+                    src="~assets/img/ordercar.svg"
+                    alt=""
+                    width="200"
+                    class="inline-block"
+                />
                 <g-card>
                     <p class="my-5">
-                        Willkommen auf <b>Get it!</b>. Deine Plattform ...
+                        Einer hat’s. Einer braucht’s. Einer bringt’s. Mit
+                        <b>GET IT!</b> möchten wir lokale Einzelhändler und
+                        Dienstleister unterstützen!
                     </p>
                     <div class="flex flex-wrap mb-3">
                         <div class="w-full">
                             <g-button
                                 color="flat"
-                                class="items-center my-1"
+                                width="w-full"
+                                class="items-center my-2"
                                 @click="$router.push('/signin')"
                             >
                                 Login with E-Mail
@@ -28,14 +30,16 @@
 
                     <!-- Using utilities: -->
                     <g-button
-                        class="items-center my-1"
+                        class="items-center my-2"
+                        width="w-full"
                         :class="{ 'spinner-light': isLoading === 'facebook' }"
                         @click="socialLogin('facebook')"
                     >
                         Login with Facebook
                     </g-button>
                     <g-button
-                        class="items-center my-1"
+                        class="items-center my-2"
+                        width="w-full"
                         :class="{ 'spinner-light': isLoading === 'google' }"
                         @click="socialLogin('google')"
                     >

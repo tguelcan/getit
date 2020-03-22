@@ -2,9 +2,9 @@
     <div>
         <div class="flex flex-wrap justify-center md:flex-no-wrap h-screen">
             <div class="w-full max-w-lg my-auto mx-3">
-                <div class="w-full">
+                <div class="w-full mb-2">
                     <nuxt-link to="/">
-                        Zurück
+                        <i class="icon i-arrow-left"></i>Zurück
                     </nuxt-link>
                 </div>
                 <g-card headline="Login">

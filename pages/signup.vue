@@ -1,10 +1,40 @@
 <template>
     <div>
+        <!-- Modal -->
+        <g-modal
+            :show="submitted"
+            centered
+            :dismiss="false"
+            confirm-text="Zur Anmeldung"
+            @confirm="confirmModal"
+            ><div class="flex flex-col">
+                <img
+                    src="~assets/img/happy.svg"
+                    width="300"
+                    alt=""
+                    class="mx-auto"
+                />
+                <div>
+                    <a
+                        class="twitter-share-button"
+                        href="https://twitter.com/intent/tweet?text=Ich helfe meiner Nachbarschaft! Du kannst das auch :)"
+                        target="_blank"
+                    >
+                        Tweet</a
+                    >
+                </div>
+                <div class="mt-3 text-xl font-bold text-primary">
+                    Danke, dass du dich für Get it registriert hast um Menschen
+                    in deiner Nähe zu helfen!
+                </div>
+            </div>
+        </g-modal>
+        <!-- Page -->
         <div class="flex flex-wrap justify-center md:flex-no-wrap h-screen">
             <div class="w-full max-w-lg my-auto mx-3">
-                <div class="w-full">
+                <div class="w-full mb-2">
                     <nuxt-link to="/">
-                        Zurück
+                        <i class="icon i-arrow-left"></i>Zurück
                     </nuxt-link>
                 </div>
                 <g-card headline="Registrieren">
@@ -161,6 +191,8 @@ import { mapActions } from 'vuex'
 import gCard from '@/components/molecules/card'
 import gButton from '@/components/molecules/button'
 
+import gModal from '@/components/organism/modal'
+
 export default {
     name: 'Signin',
     layout: 'blanc',
@@ -169,13 +201,15 @@ export default {
         ValidationObserver,
         ValidationProvider,
         gButton,
-        gCard
+        gCard,
+        gModal
     },
     data() {
         return {
             isLoading: false,
             submitted: false,
             haveError: {},
+            statusText: '',
             guest: {
                 name: '',
                 email: '',

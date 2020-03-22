@@ -88,6 +88,7 @@ export default {
         { src: '@/plugins/axios', ssr: true },
         { src: '@/plugins/validate.js', ssr: false },
         { src: '@/plugins/localStorage.js', ssr: false },
+        { src: '@/plugins/vue-timeago', ssr: false },
         { src: '@/plugins/socialAuth', ssr: false }
     ],
 

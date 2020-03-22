@@ -32,12 +32,12 @@
             <ul class="navigation flex ml-auto select-none">
                 <li class="ml-3 hidden sm:block">
                     <g-avatar
-                        img-src="../img/userpic.jpg"
+                        :img-src="user.picture"
                         img-link="/profile"
                         left
                         bordered
                         custom="border border-2"
-                        ><span class="mr-2">Clara Marlson</span></g-avatar
+                        ><span class="mr-2">{{ user.name }}</span></g-avatar
                     >
                 </li>
             </ul>
