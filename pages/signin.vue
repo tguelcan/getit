@@ -95,6 +95,7 @@
                         </form>
                     </ValidationObserver>
                 </g-card>
+                <logos />
 
                 <!-- Error Messages -->
 
@@ -117,6 +118,7 @@ import { mapActions } from 'vuex'
 
 import gCard from '@/components/molecules/card'
 import gButton from '@/components/molecules/button'
+import logos from '@/components/organism/logos'
 
 export default {
     name: 'Signin',
@@ -126,7 +128,8 @@ export default {
         ValidationObserver,
         ValidationProvider,
         gCard,
-        gButton
+        gButton,
+        logos
     },
     data: () => ({
         isLoading: false,

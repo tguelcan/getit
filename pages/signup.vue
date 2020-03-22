@@ -179,6 +179,7 @@
                         Account vorhanden?
                     </nuxt-link>
                 </div>
+                <logos />
             </div>
         </div>
     </div>
@@ -192,6 +193,7 @@ import gCard from '@/components/molecules/card'
 import gButton from '@/components/molecules/button'
 
 import gModal from '@/components/organism/modal'
+import logos from '@/components/organism/logos'
 
 export default {
     name: 'Signin',
@@ -202,7 +204,8 @@ export default {
         ValidationProvider,
         gButton,
         gCard,
-        gModal
+        gModal,
+        logos
     },
     data() {
         return {
