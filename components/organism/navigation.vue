@@ -63,7 +63,7 @@ export default {
 <style lang="scss" scoped>
 .navlink {
     @apply inline-block align-middle transition-all duration-100 ease-in-out;
-    @apply text-white p-4;
+    @apply text-white p-4 font-bold;
     &:hover {
         @apply bg-info;
     }

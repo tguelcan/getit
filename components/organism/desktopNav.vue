@@ -80,7 +80,7 @@ export default {
     a,
     ul,
     li {
-        @apply text-info;
+        @apply text-info font-bold uppercase;
         &:hover {
             @apply text-white;
         }

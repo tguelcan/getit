@@ -17,7 +17,7 @@
         </div>
         <div class="flex flex-wrap justify-center content-center mt-3">
             <div class="w-full md:w-2/3 xl:w-1/2 mx-1">
-                <g-card headline="Hello">asd</g-card>
+                <g-card headline="Liste1">asd</g-card>
             </div>
         </div>
     </div>
@@ -26,6 +26,8 @@
 <script>
 import gCard from '@/components/molecules/card'
 import gInput from '@/components/molecules/input'
+
+// import gList from '@/components/organism/list'
 // import gButton from '@/components/molecules/button'
 
 export default {
@@ -34,6 +36,7 @@ export default {
     components: {
         gCard,
         gInput
+        // gList
         // gButton
     },
     data: () => ({

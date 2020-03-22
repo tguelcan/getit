@@ -23,7 +23,7 @@
         <div class="flex flex-wrap justify-center md:flex-no-wrap h-screen">
             <div class="w-full max-w-lg my-auto mx-3 text-center">
                 <img
-                    src="~assets/img/logo.svg"
+                    src="~assets/img/logo.png"
                     alt=""
                     width="180"
                     class="inline-block"

@@ -6,20 +6,20 @@
                     <h1 class="my-3 font-bold">Wähle deine Rolle</h1>
                     <div
                         class="animated choose mt-4"
+                        @click="updateUserAction('retailer')"
+                    >
+                        <h2 class="text-primary cursor-pointer">Haben</h2>
+                        Du hast ein lokales Geschäft und suchst nach Wegen,
+                        Deine Waren ganz einfach online zu verkaufen?
+                    </div>
+                    <div
+                        class="animated choose mt-4"
                         @click="updateUserAction('buyer')"
                     >
                         <h2 class="text-primary cursor-pointer">Brauchen</h2>
                         Ich brauche etwas Du brauchst jemanden, der Deine
                         Einkäufe für dich erledigt oder mit Deinem Hund gassi
                         geht?
-                    </div>
-                    <div
-                        class="animated choose mt-4"
-                        @click="updateUserAction('retailer')"
-                    >
-                        <h2 class="text-primary cursor-pointer">Haben</h2>
-                        Du hast ein lokales Geschäft und suchst nach Wegen,
-                        Deine Waren ganz einfach online zu verkaufen?
                     </div>
 
                     <div

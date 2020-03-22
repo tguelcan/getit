@@ -3,13 +3,13 @@
     {
       "name": "Einträge",
       "route": "/",
-      "icon": "home",
+      "icon": "document-storage",
       "exact": true
     },
     {
       "name": "Einkaufslisten",
       "route": "/list",
-      "icon": "factory"
+      "icon": "check-list"
     },
     {
       "name": "Profil",

@@ -81,9 +81,9 @@ module.exports = {
             transparent: 'transparent',
             black: '#000000',
             white: '#ffffff',
-            primary: '#4068A3',
-            secondary: '#4a9bbb',
-            tertiary: '#35578A',
+            primary: '#3fdf9f',
+            secondary: '#29c2b6',
+            tertiary: '#455d78',
             dark: '#34393B',
             subtle: '#4C5356',
             grey: '#787b80',
@@ -93,7 +93,7 @@ module.exports = {
             danger: '#f8444f',
             warning: '#D8AA00',
             success: '#5ed16a',
-            info: '#78bdc4'
+            info: '#012c3d'
         },
         borderColor: (theme) => ({
             ...theme('colors'),

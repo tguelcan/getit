@@ -5,7 +5,7 @@
             v-if="$store.state.isMobile"
             class="fixed bottom-0 w-full"
         />
-        <desktop-nav v-else class="fixed top-0 w-full" />
+        <desktop-nav v-else class="fixed top-0 w-full" alternate />
         <!-- Content -->
         <div class="flex-1">
             <div :class="[$store.state.isMobile ? 'mb-20' : 'mt-16 sm:mt-20']">
