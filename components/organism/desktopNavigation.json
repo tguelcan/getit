@@ -1,7 +1,7 @@
 {
   "mainNavigationContent": [
     {
-      "name": "News",
+      "name": "Einträge",
       "route": "/",
       "exact": true
     },
