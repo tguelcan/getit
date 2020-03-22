@@ -15,6 +15,9 @@
                             ></timeago>
                         </li></ol
                 ></g-avatar>
+                <g-button class="mt-3" @click="$router.push('/role')">
+                    Rolle Wechseln
+                </g-button>
                 <g-button class="mt-3" @click="logoutUser">
                     Logout
                 </g-button></g-card
