@@ -8,27 +8,22 @@
                         class="animated choose mt-4"
                         @click="updateUserAction('retailer')"
                     >
-                        <h2 class="text-primary cursor-pointer">Haben</h2>
-                        Du hast ein lokales Geschäft und suchst nach Wegen,
-                        Deine Waren ganz einfach online zu verkaufen?
+                        <h2 class="text-primary cursor-pointer">Einzelhandel</h2>
+                        Ich biete Waren an...
                     </div>
                     <div
                         class="animated choose mt-4"
                         @click="updateUserAction('buyer')"
                     >
-                        <h2 class="text-primary cursor-pointer">Brauchen</h2>
-                        Ich brauche etwas Du brauchst jemanden, der Deine
-                        Einkäufe für dich erledigt oder mit Deinem Hund gassi
-                        geht?
+                        <h2 class="text-primary cursor-pointer">Ich benötige etwas...</h2>
                     </div>
 
                     <div
                         class="animated choose mt-4"
                         @click="updateUserAction('distributor')"
                     >
-                        <h2 class="text-primary cursor-pointer">Bringen</h2>
-                        Du kannst mit deinem Auto, Fahrrad oder zu Fuß
-                        Bestellungen abholen und ausliefern?
+                        <h2 class="text-primary cursor-pointer">Lieferant</h2>
+                        Ich liefere etwas!
                     </div>
                 </div>
             </div>
