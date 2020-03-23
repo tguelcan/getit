@@ -8,14 +8,18 @@
                         class="animated choose mt-4"
                         @click="updateUserAction('retailer')"
                     >
-                        <h2 class="text-primary cursor-pointer">Einzelhandel</h2>
+                        <h2 class="text-primary cursor-pointer">
+                            Einzelhandel
+                        </h2>
                         Ich biete Waren an...
                     </div>
                     <div
                         class="animated choose mt-4"
                         @click="updateUserAction('buyer')"
                     >
-                        <h2 class="text-primary cursor-pointer">Ich benötige etwas...</h2>
+                        <h2 class="text-primary cursor-pointer">
+                            Ich·benötige·etwas...
+                        </h2>
                     </div>
 
                     <div
